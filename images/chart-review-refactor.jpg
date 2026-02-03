@@ -1,0 +1,15 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f8fafc"/>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="24" fill="#475569" text-anchor="middle">Chart Review & Refactor</text>
+  <text x="400" y="220" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">Before and after dashboard improvement</text>
+  <rect x="100" y="250" width="250" height="80" fill="#ef4444" opacity="0.2" rx="4"/>
+  <text x="225" y="295" font-family="Arial, sans-serif" font-size="14" fill="#ef4444" text-anchor="middle">BEFORE</text>
+  <rect x="450" y="250" width="250" height="80" fill="#10b981" opacity="0.2" rx="4"/>
+  <text x="575" y="295" font-family="Arial, sans-serif" font-size="14" fill="#10b981" text-anchor="middle">AFTER</text>
+  <path d="M 380 290 L 420 290" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+    </marker>
+  </defs>
+</svg>

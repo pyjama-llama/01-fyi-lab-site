@@ -1,0 +1,11 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f8fafc"/>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="24" fill="#475569" text-anchor="middle">Reusable Chart Components</text>
+  <text x="400" y="220" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">Component library for data visualization</text>
+  <rect x="150" y="250" width="80" height="60" fill="#3b82f6" opacity="0.3" rx="4"/>
+  <rect x="250" y="250" width="80" height="60" fill="#8b5cf6" opacity="0.3" rx="4"/>
+  <rect x="350" y="250" width="80" height="60" fill="#06b6d4" opacity="0.3" rx="4"/>
+  <rect x="450" y="250" width="80" height="60" fill="#10b981" opacity="0.3" rx="4"/>
+  <rect x="550" y="250" width="80" height="60" fill="#f59e0b" opacity="0.3" rx="4"/>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">Consistent design system with accessible defaults</text>
+</svg>
