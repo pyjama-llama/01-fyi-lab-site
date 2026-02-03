@@ -1,0 +1,21 @@
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Node (if you add tooling later)
+node_modules/
+dist/
+build/
+
+# OS / temp
+*.swp
+*.tmp

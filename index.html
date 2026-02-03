@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FYI Lab — Data Visualization Studio in Reykjavík</title>
+    <meta name="description" content="FYI Lab is a one-person data visualization studio in Reykjavík, Iceland. Data storytelling, dashboards, and exploratory analysis." />
+    <meta name="color-scheme" content="light dark" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="FYI Lab home">
+          <span class="brand-mark" aria-hidden="true">FYI</span>
+          <span class="brand-name">Lab</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link is-active" href="index.html">Home</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link" href="writing.html">Writing</a>
+          <a class="nav-link" href="about.html">About</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
+            <span class="theme-toggle-label" data-theme-label>Grey</span>
+          </button>
+          <a class="button button-primary" href="mailto:hello@fyilab.is">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="kicker">One-person data viz studio</p>
+            <h1 class="hero-title">FYI Lab</h1>
+            <p class="hero-subtitle">
+              Data visualization, exploratory analysis, and clear communication for teams that ship.
+              Based in <strong>Reykjavík, Iceland</strong>.
+            </p>
+
+            <div class="hero-cta">
+              <a class="button button-primary" href="projects.html">See projects</a>
+              <a class="button" href="about.html">How I work</a>
+            </div>
+
+            <div class="hero-meta" role="list">
+              <div class="meta-item" role="listitem">
+                <span class="meta-label">Focus</span>
+                <span class="meta-value">Storytelling, dashboards, explainers</span>
+              </div>
+              <div class="meta-item" role="listitem">
+                <span class="meta-label">Tools</span>
+                <span class="meta-value">Observable, D3, Python, R</span>
+              </div>
+              <div class="meta-item" role="listitem">
+                <span class="meta-label">Timezone</span>
+                <span class="meta-value">UTC</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel" aria-label="A small sample of FYI Lab work">
+            <div class="panel-card">
+              <div class="panel-top">
+                <span class="pill">Featured</span>
+                <span class="mono">2026</span>
+              </div>
+              <h2 class="panel-title">A compact portfolio for clear thinking</h2>
+              <p class="panel-body">
+                Short projects, sharp visuals, and a bias toward shipping. Replace the placeholders with your real work as you go.
+              </p>
+              <div class="panel-actions">
+                <a class="text-link" href="projects.html">Browse projects</a>
+                <a class="text-link" href="writing.html">Read notes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Featured projects</h2>
+            <p class="section-subtitle">A few examples of the kind of work FYI Lab does.</p>
+            <a class="section-link" href="projects.html">All projects</a>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <div class="card-top">
+                <span class="mono">Interactive</span>
+                <span class="pill">Data story</span>
+              </div>
+              <h3 class="card-title">Climate indicators explorer</h3>
+              <p class="card-body">A lightweight exploration tool that helps non-technical stakeholders ask better questions.</p>
+            </article>
+            <article class="card">
+              <div class="card-top">
+                <span class="mono">Dashboard</span>
+                <span class="pill">Operations</span>
+              </div>
+              <h3 class="card-title">Performance monitoring in one view</h3>
+              <p class="card-body">A single page that reduces reporting overhead and surfaces the few numbers that matter.</p>
+            </article>
+            <article class="card">
+              <div class="card-top">
+                <span class="mono">Explainer</span>
+                <span class="pill">Long-form</span>
+              </div>
+              <h3 class="card-title">What the distribution hides</h3>
+              <p class="card-body">A narrative piece with annotated charts, designed to be shared internally.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Services</h2>
+            <p class="section-subtitle">A simple menu, adapted to your context.</p>
+          </div>
+
+          <div class="two-col">
+            <div class="stack">
+              <div class="service">
+                <h3 class="service-title">Data visualization & storytelling</h3>
+                <p class="service-body">Turn messy data into a clear narrative and a chart system you can reuse.</p>
+              </div>
+              <div class="service">
+                <h3 class="service-title">Dashboard design</h3>
+                <p class="service-body">Practical dashboards that stay fast, readable, and hard to misinterpret.</p>
+              </div>
+              <div class="service">
+                <h3 class="service-title">Exploratory analysis</h3>
+                <p class="service-body">Rapid iteration to find the signal, with reproducible outputs.</p>
+              </div>
+            </div>
+
+            <div class="callout">
+              <h3 class="callout-title">Availability</h3>
+              <p class="callout-body">
+                FYI Lab is a solo practice. The best projects start with a short brief and a quick call.
+              </p>
+              <a class="button button-primary" href="mailto:hello@fyilab.is?subject=FYI%20Lab%20project">Email hello@fyilab.is</a>
+              <p class="tiny muted">Replace this email address with your preferred contact.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">How to tell if you need help</h2>
+            <p class="section-subtitle">Real-life signals that your data could be doing more work for you.</p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <div class="card-top">
+                <span class="mono">Bank</span>
+                <span class="pill">Risk</span>
+              </div>
+              <h3 class="card-title">The same KPI means different things in different teams</h3>
+              <p class="card-body">If credit, product, and compliance don’t agree on definitions, the dashboard becomes a debate instead of a tool.</p>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <span class="mono">Polling</span>
+                <span class="pill">Uncertainty</span>
+              </div>
+              <h3 class="card-title">A single headline number is doing too much</h3>
+              <p class="card-body">If your results need a footnote every time, it’s time for visuals that show margins, segments, and change over time.</p>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <span class="mono">Ops</span>
+                <span class="pill">Speed</span>
+              </div>
+              <h3 class="card-title">Reporting takes longer than deciding</h3>
+              <p class="card-body">If you’re exporting spreadsheets weekly, the system is asking for automation and a clearer hierarchy.</p>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <span class="mono">Public</span>
+                <span class="pill">Trust</span>
+              </div>
+              <h3 class="card-title">Stakeholders misread charts in meetings</h3>
+              <p class="card-body">If the chart needs narration to be safe, you likely need better annotation, scales, and accessible defaults.</p>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <span class="mono">Research</span>
+                <span class="pill">Repeatability</span>
+              </div>
+              <h3 class="card-title">Every new question means starting from scratch</h3>
+              <p class="card-body">If analysis lives in one person’s laptop, you need reusable templates and a reproducible workflow.</p>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <span class="mono">Product</span>
+                <span class="pill">Focus</span>
+              </div>
+              <h3 class="card-title">Your dashboard is a wall of numbers</h3>
+              <p class="card-body">If it’s hard to see what changed and why, you need structure: comparisons, targets, and a story thread.</p>
+            </article>
+          </div>
+
+          <div class="hero-cta" style="margin-top: 16px;">
+            <a class="button button-primary" href="mailto:hello@fyilab.is?subject=FYI%20Lab%20help%20request">Ask about your case</a>
+            <a class="button" href="about.html">How I work</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Writing</h2>
+            <p class="section-subtitle">Short notes on data work, clarity, and craft.</p>
+            <a class="section-link" href="writing.html">All writing</a>
+          </div>
+
+          <div class="list">
+            <a class="list-item" href="writing.html">
+              <span class="mono">Note</span>
+              <span class="list-title">The two questions every chart should answer</span>
+              <span class="list-meta">4 min</span>
+            </a>
+            <a class="list-item" href="writing.html">
+              <span class="mono">Note</span>
+              <span class="list-title">Grey UI, strong hierarchy</span>
+              <span class="list-meta">3 min</span>
+            </a>
+            <a class="list-item" href="writing.html">
+              <span class="mono">Guide</span>
+              <span class="list-title">A tiny checklist for dashboard reviews</span>
+              <span class="list-meta">6 min</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">FYI Lab</div>
+          <div class="footer-meta">Reykjavík, Iceland</div>
+        </div>
+        <div class="footer-links">
+          <a class="text-link" href="mailto:hello@fyilab.is">hello@fyilab.is</a>
+          <a class="text-link" href="projects.html">Projects</a>
+          <a class="text-link" href="writing.html">Writing</a>
+          <a class="text-link" href="about.html">About</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
