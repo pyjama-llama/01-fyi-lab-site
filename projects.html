@@ -25,17 +25,29 @@
         </a>
 
         <nav class="site-nav" aria-label="Primary">
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link is-active" href="projects.html">Projects</a>
+          <a class="nav-link" href="index.html">Work</a>
           <a class="nav-link" href="writing.html">Writing</a>
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link is-active" href="about.html">About</a>
         </nav>
 
         <div class="header-actions">
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
-            <span class="theme-toggle-label" data-theme-label>Grey</span>
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display: none;">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
           </button>
-          <a class="button button-primary" href="mailto:hello@fyilab.is">Contact</a>
+          <a class="nav-link" href="mailto:hello@fyilab.is">Contact</a>
         </div>
       </div>
     </header>
@@ -56,7 +68,7 @@
         <div class="container">
           <div class="cards">
             <article class="card card-wide card-with-image">
-              <img src="images/climate-indicators-explorer.jpg" alt="Climate indicators explorer interface" class="card-image">
+              <img src="images/climate-indicators-explorer.svg" alt="Climate indicators explorer interface" class="card-image">
               <div class="card-top">
                 <span class="mono">Interactive</span>
                 <span class="pill">Observable / D3</span>
@@ -72,7 +84,7 @@
             </article>
 
             <article class="card card-wide card-with-image">
-              <img src="images/performance-dashboard.jpg" alt="Performance monitoring dashboard" class="card-image">
+              <img src="images/performance-dashboard.svg" alt="Performance monitoring dashboard" class="card-image">
               <div class="card-top">
                 <span class="mono">Dashboard</span>
                 <span class="pill">Design system</span>
@@ -88,7 +100,7 @@
             </article>
 
             <article class="card card-wide card-with-image">
-              <img src="images/distribution-explainer.jpg" alt="Distribution explainer with annotated charts" class="card-image">
+              <img src="images/distribution-explainer.svg" alt="Distribution explainer with annotated charts" class="card-image">
               <div class="card-top">
                 <span class="mono">Explainer</span>
                 <span class="pill">Long-form</span>
@@ -103,7 +115,7 @@
             </article>
 
             <article class="card card-with-image">
-              <img src="images/small-multiple-comparison.jpg" alt="Small multiple comparison template" class="card-image">
+              <img src="images/small-multiple-comparison.svg" alt="Small multiple comparison template" class="card-image">
               <div class="card-top">
                 <span class="mono">Prototype</span>
                 <span class="pill">Research</span>
@@ -113,7 +125,7 @@
             </article>
 
             <article class="card card-with-image">
-              <img src="images/chart-review-refactor.jpg" alt="Chart review and refactor example" class="card-image">
+              <img src="images/chart-review-refactor.svg" alt="Chart review and refactor example" class="card-image">
               <div class="card-top">
                 <span class="mono">Audit</span>
                 <span class="pill">Clarity</span>
@@ -123,7 +135,7 @@
             </article>
 
             <article class="card card-with-image">
-              <img src="images/chart-components.jpg" alt="Reusable chart components" class="card-image">
+              <img src="images/chart-components.svg" alt="Reusable chart components" class="card-image">
               <div class="card-top">
                 <span class="mono">Toolkit</span>
                 <span class="pill">R / Python</span>

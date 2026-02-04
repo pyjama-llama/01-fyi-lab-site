@@ -10,9 +10,16 @@ let aurora = null;
 
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
-  const label = document.querySelector("[data-theme-label]");
-  if (label) {
-    label.textContent = theme === "dark" ? "Dark" : "Grey";
+  const sunIcon = document.querySelector(".theme-icon-sun");
+  const moonIcon = document.querySelector(".theme-icon-moon");
+  if (sunIcon && moonIcon) {
+    if (theme === "dark") {
+      sunIcon.style.display = "block";
+      moonIcon.style.display = "none";
+    } else {
+      sunIcon.style.display = "none";
+      moonIcon.style.display = "block";
+    }
   }
   try {
     localStorage.setItem(STORAGE_KEY, theme);

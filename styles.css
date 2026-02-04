@@ -199,23 +199,18 @@ a:hover {
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
+  justify-content: center;
+  padding: 8px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: color-mix(in oklab, var(--surface) 92%, transparent);
   cursor: pointer;
+  color: var(--muted);
 }
 
 .theme-toggle:hover {
   background: color-mix(in oklab, var(--surface) 100%, transparent);
-}
-
-.theme-toggle-label {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing: 0.05em;
+  color: var(--text);
 }
 
 .hero {
