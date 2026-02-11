@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Indicators Explorer - FYI Lab</title>
+  <meta name="description" content="A lightweight exploration tool that helps non-technical stakeholders ask better questions about climate data trends and patterns.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-left">
+        <a class="header-brand" href="index.html">FYI Lab</a>
+        <nav class="nav">
+          <a class="nav-link" href="index.html">Work</a>
+          <a class="nav-link" href="projects.html">Projects</a>
+          <a class="nav-link" href="writing.html">Writing</a>
+          <a class="nav-link" href="about.html">About</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a class="nav-link" href="mailto:hello@fyilab.is">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="page">
+    <section class="page-head">
+      <div class="container">
+        <div class="project-meta">
+          <p class="kicker">Interactive Data Story</p>
+          <h1 class="page-title">Climate Indicators Explorer</h1>
+          <div class="project-tags">
+            <span class="tag">Observable</span>
+            <span class="tag">D3.js</span>
+            <span class="tag">Climate Data</span>
+            <span class="tag">Data Story</span>
+          </div>
+          <p class="page-subtitle">
+            A lightweight exploration tool that helps non-technical stakeholders ask better questions about climate data trends and patterns.
+          </p>
+          <div class="project-stats">
+            <span class="stat-item">
+              <strong>Client:</strong> Environmental Research Organization
+            </span>
+            <span class="stat-item">
+              <strong>Duration:</strong> 2 weeks
+            </span>
+            <span class="stat-item">
+              <strong>Time to read:</strong> 5 min
+            </span>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="article-layout">
+          <!-- Hero Image -->
+          <div class="article-hero">
+            <img src="images/climate-indicators-explorer.png" alt="Climate indicators explorer interface" class="article-hero-image">
+            <div class="article-hero-caption">
+              <p>The Climate Indicators Explorer interface showing multiple climate metrics with interactive exploration tools.</p>
+            </div>
+          </div>
+
+          <!-- Article Content -->
+          <article class="article-content">
+            <!-- The Challenge -->
+            <section class="article-section">
+              <h2>The Challenge</h2>
+              <p>
+                Climate data is complex and often overwhelming for non-technical stakeholders. Traditional dashboards present too much information at once, 
+                making it difficult for decision-makers to identify key trends and ask meaningful questions about the data.
+              </p>
+              <blockquote class="article-pullquote">
+                "Information overload prevents effective decision-making and reduces stakeholder engagement with climate data."
+              </blockquote>
+              <p>
+                The Environmental Research Organization needed a way to make their extensive climate datasets accessible to policy makers, 
+                journalists, and the public without requiring technical expertise.
+              </p>
+            </section>
+
+            <!-- The Solution -->
+            <section class="article-section">
+              <h2>The Solution</h2>
+              <p>
+                I created an interactive exploration tool that guides users through climate indicators progressively. The interface uses 
+                small multiples, contextual annotations, and guided exploration to help users understand patterns without 
+                cognitive overload.
+              </p>
+              
+              <div class="article-features">
+                <h3>Key Features</h3>
+                <ul>
+                  <li><strong>Progressive Disclosure:</strong> Users can drill down from overview to detailed views</li>
+                  <li><strong>Contextual Annotations:</strong> Key insights are highlighted with explanations</li>
+                  <li><strong>Small Multiples:</strong> Multiple indicators shown side-by-side for comparison</li>
+                  <li><strong>Guided Questions:</strong> Built-in prompts help users ask better questions</li>
+                </ul>
+              </div>
+
+              <div class="article-image">
+                <img src="images/climate-indicators-explorer-detail.png" alt="Detail view showing annotations and exploration tools">
+                <p class="image-caption">Detail view showing contextual annotations and interactive exploration tools.</p>
+              </div>
+            </section>
+
+            <!-- Technical Implementation -->
+            <section class="article-section">
+              <h2>Technical Implementation</h2>
+              <p>
+                Built with Observable and D3.js, the tool uses reactive patterns to handle large datasets efficiently. 
+                The visualization updates smoothly as users explore different time ranges and indicators.
+              </p>
+              
+              <div class="tech-stack">
+                <h3>Technology Stack</h3>
+                <ul>
+                  <li><strong>Frontend:</strong> Observable, D3.js, JavaScript</li>
+                  <li><strong>Data Processing:</strong> CSV, JSON APIs</li>
+                  <li><strong>Visualization:</strong> Interactive charts, small multiples, annotations</li>
+                  <li><strong>Performance:</strong> Lazy loading, reactive updates</li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Results -->
+            <section class="article-section">
+              <h2>Impact & Results</h2>
+              <div class="results-metrics">
+                <div class="metric">
+                  <div class="metric-number">40%</div>
+                  <div class="metric-label">Reduced exploration time</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-number">3x</div>
+                  <div class="metric-label">Increased stakeholder engagement</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-number">5+</div>
+                  <div class="metric-label">Departments adopted</div>
+                </div>
+              </div>
+              <p>
+                The tool helped stakeholders identify previously hidden patterns in climate data, leading to more informed 
+                decision-making and better resource allocation for climate initiatives.
+              </p>
+              <p>
+                Within three months of launch, the tool became the primary reference for climate analysis across the organization, 
+                with policy makers citing specific insights discovered through the interface in their decision-making processes.
+              </p>
+            </section>
+
+            <!-- Lessons Learned -->
+            <section class="article-section">
+              <h2>Lessons Learned</h2>
+              <p>
+                This project reinforced the importance of progressive disclosure in data visualization. Rather than overwhelming users 
+                with all available data at once, guiding them through a structured exploration process leads to better understanding 
+                and more meaningful insights.
+              </p>
+              <p>
+                The small multiples approach proved particularly effective for comparing climate indicators across different regions 
+                and time periods, allowing users to spot patterns that would be difficult to identify in traditional dashboard layouts.
+              </p>
+            </section>
+          </article>
+
+          <!-- Sidebar -->
+          <aside class="article-sidebar">
+            <div class="sidebar-section">
+              <h3>Project Details</h3>
+              <dl class="project-details">
+                <dt>Client</dt>
+                <dd>Environmental Research Organization</dd>
+                <dt>Duration</dt>
+                <dd>2 weeks</dd>
+                <dt>Role</dt>
+                <dd>Lead Visualization Consultant</dd>
+                <dt>Deliverables</dt>
+                <dd>Interactive tool, documentation, training</dd>
+              </dl>
+            </div>
+
+            <div class="sidebar-section">
+              <h3>Quick Actions</h3>
+              <div class="action-links">
+                <a href="#" class="button button-primary">View Live Demo</a>
+                <a href="#" class="button">View Source</a>
+                <a href="mailto:hello@fyilab.is?subject=Climate%20Indicators%20Explorer" class="text-link">Discuss Similar Project</a>
+              </div>
+            </div>
+
+            <div class="sidebar-section">
+              <h3>Related Work</h3>
+              <div class="related-projects">
+                <a href="projects.html" class="related-project">
+                  <img src="images/performance-dashboard.png" alt="Performance dashboard">
+                  <span>Performance Dashboard</span>
+                </a>
+                <a href="projects.html" class="related-project">
+                  <img src="images/distribution-explainer.png" alt="Distribution explainer">
+                  <span>Distribution Analysis</span>
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- More Projects Section -->
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">More Projects</h2>
+            <p class="section-subtitle">Explore similar work in data visualization and analysis.</p>
+          </div>
+          
+          <div class="thumbnail-grid">
+            <article class="thumbnail-card">
+              <img src="images/performance-dashboard.png" alt="Performance monitoring dashboard" class="thumbnail-image">
+              <div class="thumbnail-content">
+                <div class="thumbnail-top">
+                  <span class="mono">Dashboard</span>
+                  <span class="pill">Design system</span>
+                </div>
+                <h3 class="thumbnail-title">Performance monitoring</h3>
+                <p class="thumbnail-body">Dashboard that prioritizes hierarchy and comparability.</p>
+              </div>
+            </article>
+            
+            <article class="thumbnail-card">
+              <img src="images/distribution-explainer.png" alt="Distribution explainer with annotated charts" class="thumbnail-image">
+              <div class="thumbnail-content">
+                <div class="thumbnail-top">
+                  <span class="mono">Explainer</span>
+                  <span class="pill">Long-form</span>
+                </div>
+                <h3 class="thumbnail-title">Distribution analysis</h3>
+                <p class="thumbnail-body">Narrative explainer with annotated charts.</p>
+              </div>
+            </article>
+            
+            <article class="thumbnail-card">
+              <img src="images/small-multiple-comparison.svg" alt="Small multiple comparison charts" class="thumbnail-image">
+              <div class="thumbnail-content">
+                <div class="thumbnail-top">
+                  <span class="mono">Prototype</span>
+                  <span class="pill">Research</span>
+                </div>
+                <h3 class="thumbnail-title">Small-multiple comparison</h3>
+                <p class="thumbnail-body">Reusable template for comparing categories.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">FYI Lab</div>
+          <p class="footer-copy">© 2024 FYI Lab. Transforming complex data into clear decisions.</p>
+        </div>
+        <div class="footer-links">
+          <a class="text-link" href="mailto:hello@fyilab.is">hello@fyilab.is</a>
+          <a class="text-link" href="projects.html">Projects</a>
+          <a class="text-link" href="writing.html">Writing</a>
+          <a class="text-link" href="about.html">About</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
