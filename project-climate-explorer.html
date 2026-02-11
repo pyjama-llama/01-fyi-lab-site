@@ -7,40 +7,44 @@
   <meta name="description" content="A lightweight exploration tool that helps non-technical stakeholders ask better questions about climate data trends and patterns.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <div class="header-left">
-        <a class="header-brand" href="index.html">FYI Lab</a>
-        <nav class="nav">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="FYI Lab home">
+          <span class="brand-mark" aria-hidden="true">FYI</span>
+          <span class="brand-name">Lab</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
           <a class="nav-link" href="index.html">Work</a>
-          <a class="nav-link" href="projects.html">Projects</a>
           <a class="nav-link" href="writing.html">Writing</a>
+          <a class="nav-link" href="projects.html">Projects</a>
           <a class="nav-link" href="about.html">About</a>
         </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display: none;">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <a class="text-link" href="mailto:hello@fyilab.is">Contact</a>
+        </div>
       </div>
-      <div class="header-right">
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
-          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display: none;">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
-        <a class="nav-link" href="mailto:hello@fyilab.is">Contact</a>
-      </div>
-    </div>
-  </header>
+    </header>
 
   <main id="content" class="page">
     <section class="page-head">
@@ -48,15 +52,13 @@
         <div class="project-meta">
           <p class="kicker">Interactive Data Story</p>
           <h1 class="page-title">Climate Indicators Explorer</h1>
+          <p class="page-subtitle">A lightweight exploration tool that helps non-technical stakeholders ask better questions about climate data trends and patterns.</p>
           <div class="project-tags">
             <span class="tag">Observable</span>
             <span class="tag">D3.js</span>
             <span class="tag">Climate Data</span>
             <span class="tag">Data Story</span>
           </div>
-          <p class="page-subtitle">
-            A lightweight exploration tool that helps non-technical stakeholders ask better questions about climate data trends and patterns.
-          </p>
           <div class="project-stats">
             <span class="stat-item">
               <strong>Client:</strong> Environmental Research Organization
@@ -90,14 +92,14 @@
               <h2>The Challenge</h2>
               <p>
                 Climate data is complex and often overwhelming for non-technical stakeholders. Traditional dashboards present too much information at once, 
-                making it difficult for decision-makers to identify key trends and ask meaningful questions about the data.
+                making it difficult for decision-makers to identify key trends and ask meaningful questions about data.
               </p>
               <blockquote class="article-pullquote">
                 "Information overload prevents effective decision-making and reduces stakeholder engagement with climate data."
               </blockquote>
               <p>
                 The Environmental Research Organization needed a way to make their extensive climate datasets accessible to policy makers, 
-                journalists, and the public without requiring technical expertise.
+                journalists, and public without requiring technical expertise.
               </p>
             </section>
 
@@ -187,22 +189,8 @@
             </section>
           </article>
 
-          <!-- Sidebar -->
-          <aside class="article-sidebar">
-            <div class="sidebar-section">
-              <h3>Project Details</h3>
-              <dl class="project-details">
-                <dt>Client</dt>
-                <dd>Environmental Research Organization</dd>
-                <dt>Duration</dt>
-                <dd>2 weeks</dd>
-                <dt>Role</dt>
-                <dd>Lead Visualization Consultant</dd>
-                <dt>Deliverables</dt>
-                <dd>Interactive tool, documentation, training</dd>
-              </dl>
-            </div>
-
+          <!-- Sidebar Content (moved to bottom) -->
+          <div class="article-sidebar-content">
             <div class="sidebar-section">
               <h3>Quick Actions</h3>
               <div class="action-links">
@@ -225,7 +213,7 @@
                 </a>
               </div>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
 
