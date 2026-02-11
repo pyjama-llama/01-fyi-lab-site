@@ -10,15 +10,18 @@ let aurora = null;
 
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
+  localStorage.setItem(STORAGE_KEY, theme);
+  
   const sunIcon = document.querySelector(".theme-icon-sun");
   const moonIcon = document.querySelector(".theme-icon-moon");
+  
   if (sunIcon && moonIcon) {
     if (theme === "dark") {
-      sunIcon.style.display = "block";
-      moonIcon.style.display = "none";
-    } else {
       sunIcon.style.display = "none";
       moonIcon.style.display = "block";
+    } else {
+      sunIcon.style.display = "block";
+      moonIcon.style.display = "none";
     }
   }
   try {
@@ -42,7 +45,8 @@ function getSavedTheme() {
 
 function initTheme() {
   const saved = getSavedTheme();
-  const theme = saved === "dark" ? "dark" : "grey";
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? "dark" : "grey");
   setTheme(theme);
 }
 
@@ -1014,3 +1018,121 @@ function initBackground() {
 initTheme();
 initToggle();
 initBackground();
+
+// Chart Makeover Interactions
+document.addEventListener("DOMContentLoaded", function() {
+  // Interactive Slider functionality
+  const sliders = document.querySelectorAll('.comparison-slider');
+  sliders.forEach(slider => {
+    const handle = slider.querySelector('.slider-handle');
+    const after = slider.querySelector('.comparison-after');
+    let isDragging = false;
+
+    function updateSlider(x) {
+      const rect = slider.getBoundingClientRect();
+      const percent = Math.max(0, Math.min(1, (x - rect.left) / rect.width));
+      handle.style.left = (percent * 100) + '%';
+      after.style.clipPath = `inset(0 ${100 - percent * 100}% 0 0)`;
+    }
+
+    handle.addEventListener('mousedown', () => isDragging = true);
+    document.addEventListener('mouseup', () => isDragging = false);
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) updateSlider(e.clientX);
+    });
+
+    // Touch support
+    handle.addEventListener('touchstart', () => isDragging = true);
+    document.addEventListener('touchend', () => isDragging = false);
+    document.addEventListener('touchmove', (e) => {
+      if (isDragging) updateSlider(e.touches[0].clientX);
+    });
+  });
+
+  // Tabbed View functionality
+  const tabButtons = document.querySelectorAll('.tab-button');
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tabId = button.dataset.tab;
+      const container = button.closest('.tab-container');
+      
+      // Remove active class from all buttons and panes in this container
+      container.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      container.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+      
+      // Add active class to clicked button and corresponding pane
+      button.classList.add('active');
+      const targetPane = document.getElementById(tabId);
+      if (targetPane) targetPane.classList.add('active');
+    });
+  });
+});
+
+// Problem Modal functionality
+const problemData = {
+  'metric-confusion': {
+    title: 'Same KPI, Different Meanings',
+    image: 'images/problem-metric-confusion-full.png',
+    problem: 'When different teams define the same KPI differently, your dashboard becomes a debate forum rather than a decision tool. Credit, product, and compliance teams might all track "customer satisfaction" but measure it in completely different ways.',
+    impact: 'Teams spend 30+ minutes in meetings arguing about metrics instead of making decisions. Executive confidence in data plummets when numbers don\'t align across departments.',
+    solution: 'Create a data dictionary with clear definitions. Use consistent naming conventions. Design dashboards that show both the metric and its definition. Include methodology notes for complex calculations.'
+  },
+  'visual-overload': {
+    title: 'Chart Creates More Questions',
+    image: 'images/problem-visual-overload-full.png',
+    problem: 'This chart violates cognitive load principles by presenting too much information at once. Multiple chart types, excessive colors, and competing visual elements prevent users from finding the key insight.',
+    impact: 'Stakeholders say "I don\'t get it" and request additional explanations. Decision-making slows as users try to decode the visualization instead of understanding the data.',
+    solution: 'Apply the "one chart, one message" principle. Use pre-attentive attributes strategically. Remove non-essential elements. Guide attention to the key insight through visual hierarchy.'
+  },
+  'presentation-fail': {
+    title: 'Document vs Presentation',
+    image: 'images/problem-presentation-fail-full.png',
+    problem: 'This slide treats a presentation like a document - dense text, small fonts, too much information. Presentations are billboards, documents are for deep reading. The two serve different purposes.',
+    impact: 'Audience either stops reading or misses key points. Message gets lost in the noise. Presenter loses control of the narrative as attendees try to read everything.',
+    solution: 'Follow the 3-second rule: if it takes longer than 3 seconds to understand, simplify. Use one idea per slide. Make text big enough to read from the back of the room. Use visuals to support your narrative.'
+  },
+  'dashboard-wall': {
+    title: 'The Wall of Numbers',
+    image: 'images/problem-dashboard-wall-full.png',
+    problem: 'This dashboard presents a wall of metrics without hierarchy or context. Users can\'t tell what\'s important, what changed, or what action to take. It\'s a data dump, not a decision tool.',
+    impact: 'Users feel overwhelmed and ignore the dashboard entirely. Important insights get buried in noise. Decision-making paralysis replaces data-driven action.',
+    solution: 'Create clear visual hierarchy. Group related metrics. Use comparison and context. Include trend lines and targets. Design for the primary question the dashboard needs to answer.'
+  }
+};
+
+function openProblemModal(problemId) {
+  const modal = document.getElementById('problemModal');
+  const data = problemData[problemId];
+  
+  if (data) {
+    document.getElementById('modalTitle').textContent = data.title;
+    document.getElementById('modalImage').src = data.image;
+    document.getElementById('modalProblem').textContent = data.problem;
+    document.getElementById('modalImpact').textContent = data.impact;
+    document.getElementById('modalSolution').textContent = data.solution;
+    
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeProblemModal() {
+  const modal = document.getElementById('problemModal');
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('problemModal');
+  if (event.target === modal) {
+    closeProblemModal();
+  }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeProblemModal();
+  }
+});

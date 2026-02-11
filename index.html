@@ -179,103 +179,107 @@
         </div>
       </section>
 
+      <!-- Chart Makeovers Section -->
       <section class="section">
         <div class="container">
           <div class="section-head">
-            <h2 class="section-title">How to tell if you need help</h2>
-            <p class="section-subtitle">Real-life signals that your data could be doing more work for you.</p>
+            <h2 class="section-title">Chart Makeovers: Interactive Slider</h2>
+            <p class="section-subtitle">Drag the slider to see transformations from confusion to clarity</p>
           </div>
 
-          <div class="cards">
-            <article class="card">
-              <div class="card-top">
-                <span class="mono">Bank</span>
-                <span class="pill">Risk</span>
+          <div class="makeover-slider">
+            <div class="makeover-item">
+              <h3>The "Everything Dashboard" → Focused Insights</h3>
+              <div class="comparison-slider">
+                <div class="comparison-before">
+                  <img src="images/before-dashboard.png" alt="Before: Complex dashboard" class="comparison-image">
+                  <span class="comparison-label">Before: 20+ metrics, no focus</span>
+                </div>
+                <div class="comparison-after">
+                  <img src="images/after-dashboard.png" alt="After: Focused dashboard" class="comparison-image">
+                  <span class="comparison-label">After: 3 key metrics, clear hierarchy</span>
+                </div>
+                <div class="slider-handle">↔</div>
               </div>
-              <h3 class="card-title">The same KPI means different things in different teams</h3>
-              <p class="card-body">If credit, product, and compliance don’t agree on definitions, the dashboard becomes a debate instead of a tool.</p>
-            </article>
-
-            <article class="card">
-              <div class="card-top">
-                <span class="mono">Polling</span>
-                <span class="pill">Uncertainty</span>
-              </div>
-              <h3 class="card-title">A single headline number is doing too much</h3>
-              <p class="card-body">If your results need a footnote every time, it’s time for visuals that show margins, segments, and change over time.</p>
-            </article>
-
-            <article class="card">
-              <div class="card-top">
-                <span class="mono">Ops</span>
-                <span class="pill">Speed</span>
-              </div>
-              <h3 class="card-title">Reporting takes longer than deciding</h3>
-              <p class="card-body">If you’re exporting spreadsheets weekly, the system is asking for automation and a clearer hierarchy.</p>
-            </article>
-
-            <article class="card">
-              <div class="card-top">
-                <span class="mono">Public</span>
-                <span class="pill">Trust</span>
-              </div>
-              <h3 class="card-title">Stakeholders misread charts in meetings</h3>
-              <p class="card-body">If the chart needs narration to be safe, you likely need better annotation, scales, and accessible defaults.</p>
-            </article>
-
-            <article class="card">
-              <div class="card-top">
-                <span class="mono">Research</span>
-                <span class="pill">Repeatability</span>
-              </div>
-              <h3 class="card-title">Every new question means starting from scratch</h3>
-              <p class="card-body">If analysis lives in one person’s laptop, you need reusable templates and a reproducible workflow.</p>
-            </article>
-
-            <article class="card">
-              <div class="card-top">
-                <span class="mono">Product</span>
-                <span class="pill">Focus</span>
-              </div>
-              <h3 class="card-title">Your dashboard is a wall of numbers</h3>
-              <p class="card-body">If it’s hard to see what changed and why, you need structure: comparisons, targets, and a story thread.</p>
-            </article>
-          </div>
-
-          <div class="hero-cta" style="margin-top: 16px;">
-            <a class="button button-primary" href="mailto:hello@fyilab.is?subject=FYI%20Lab%20help%20request">Ask about your case</a>
-            <a class="button" href="about.html">How I work</a>
+              <p class="makeover-result"><strong>Result:</strong> 80% reduction in cognitive load, faster decision-making</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <!-- OPTION 2: Tabbed View -->
+      <section class="section section-muted">
         <div class="container">
           <div class="section-head">
-            <h2 class="section-title">Writing</h2>
-            <p class="section-subtitle">Short notes on data work, clarity, and craft.</p>
-            <a class="section-link" href="writing.html">All writing</a>
+            <h2 class="section-title">Chart Makeovers: Tabbed View</h2>
+            <p class="section-subtitle">Click tabs to see before and after transformations</p>
           </div>
 
-          <div class="list">
-            <a class="list-item" href="writing.html">
-              <span class="mono">Note</span>
-              <span class="list-title">The two questions every chart should answer</span>
-              <span class="list-meta">4 min</span>
-            </a>
-            <a class="list-item" href="writing.html">
-              <span class="mono">Note</span>
-              <span class="list-title">Grey UI, strong hierarchy</span>
-              <span class="list-meta">3 min</span>
-            </a>
-            <a class="list-item" href="writing.html">
-              <span class="mono">Guide</span>
-              <span class="list-title">A tiny checklist for dashboard reviews</span>
-              <span class="list-meta">6 min</span>
-            </a>
+          <div class="makeover-tabs">
+            <div class="makeover-item">
+              <h3>The "Rainbow Report" → Strategic Color Usage</h3>
+              <div class="tab-container">
+                <div class="tab-buttons">
+                  <button class="tab-button active" data-tab="before1">Before</button>
+                  <button class="tab-button" data-tab="after1">After</button>
+                </div>
+                <div class="tab-content">
+                  <div class="tab-pane active" id="before1">
+                    <img src="images/before-rainbow.png" alt="Before: Rainbow colored chart" class="tab-image">
+                    <p>Multi-colored chart that's hard to read and interpret</p>
+                  </div>
+                  <div class="tab-pane" id="after1">
+                    <img src="images/after-rainbow.png" alt="After: Strategic color chart" class="tab-image">
+                    <p>Single-color focus with strategic highlights that guide attention</p>
+                  </div>
+                </div>
+              </div>
+              <p class="makeover-result"><strong>Result:</strong> Clear visual hierarchy, instant pattern recognition</p>
+            </div>
           </div>
         </div>
       </section>
+
+      <!-- OPTION 3: Scroll Reveal -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Chart Makeovers: Scroll Reveal</h2>
+            <p class="section-subtitle">Scroll to see the transformation unfold</p>
+          </div>
+
+          <div class="makeover-scroll">
+            <div class="makeover-item">
+              <h3>The "Table Overload" → Visual Summary</h3>
+              <div class="scroll-reveal">
+                <div class="reveal-before">
+                  <img src="images/before-table.png" alt="Before: Dense table" class="reveal-image">
+                  <span class="reveal-label">Before: Dense table with tiny numbers</span>
+                </div>
+                <div class="reveal-after">
+                  <img src="images/after-table.png" alt="After: Visual summary" class="reveal-image">
+                  <span class="reveal-label">After: Visual summary with drill-down options</span>
+                </div>
+              </div>
+              <p class="makeover-result"><strong>Result:</strong> Pattern recognition vs. number hunting, 3x faster insights</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Ready for your chart makeover?</h2>
+            <p class="section-subtitle">Send me your most confusing visualization and I'll show you exactly how to transform it</p>
+          </div>
+          <div class="hero-cta">
+            <a class="button button-primary" href="mailto:hello@fyilab.is?subject=Chart%20Makeover%20Request">Get your free makeover</a>
+            <a class="button" href="about.html">See my process</a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <footer class="site-footer">
@@ -293,4 +297,35 @@
       </div>
     </footer>
   </body>
+
+  <!-- Problem Modal -->
+  <div id="problemModal" class="problem-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Problem Analysis</h3>
+        <button class="modal-close" onclick="closeProblemModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="modalImage" src="" alt="Problem example" class="modal-image">
+        <div class="modal-analysis">
+          <div class="analysis-section">
+            <h4>What's Wrong</h4>
+            <p id="modalProblem">Analysis of the data visualization problem...</p>
+          </div>
+          <div class="analysis-section">
+            <h4>Why It Matters</h4>
+            <p id="modalImpact">Business impact and cognitive load issues...</p>
+          </div>
+          <div class="analysis-section">
+            <h4>How to Fix It</h4>
+            <p id="modalSolution">Design principles and specific solutions...</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="mailto:hello@fyilab.is?subject=Data%20Problem%20Analysis" class="button button-primary">Get help with this problem</a>
+        <a href="data-problems.html" class="button">See all examples</a>
+      </div>
+    </div>
+  </div>
 </html>

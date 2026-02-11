@@ -1,0 +1,10 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  <text x="400" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#666">Before: Dense Table</text>
+  <text x="400" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#999">Tiny numbers, hard to scan</text>
+  <rect x="100" y="250" width="600" height="120" fill="white" stroke="#ddd"/>
+  <text x="110" y="270" font-family="monospace" font-size="8" fill="#666">Q1 2024: 1,234,567  89.2%  $45,678  1,234  567  89.2%  45,678  1,234  567  89.2%</text>
+  <text x="110" y="285" font-family="monospace" font-size="8" fill="#666">Q2 2024: 2,345,678  91.5% $56,789  2,345  678  91.5%  56,789  2,345  678  91.5%</text>
+  <text x="110" y="300" font-family="monospace" font-size="8" fill="#666">Q3 2024: 3,456,789  93.1% $67,890  3,456  789  93.1%  67,890  3,456  789  93.1%</text>
+  <text x="110" y="315" font-family="monospace" font-size="8" fill="#666">Q4 2024: 4,567,890  94.8% $78,901  4,567  890  94.8%  78,901  4,567  890  94.8%</text>
+</svg>
