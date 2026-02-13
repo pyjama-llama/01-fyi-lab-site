@@ -19,7 +19,6 @@
 
         <nav class="site-nav" aria-label="Primary">
           <a class="nav-link" href="index.html">Work</a>
-          <a class="nav-link" href="writing.html">Writing</a>
           <a class="nav-link" href="projects.html">Projects</a>
           <a class="nav-link" href="about.html">About</a>
         </nav>
@@ -87,15 +86,15 @@
 
           <!-- Article Content -->
           <article class="article-content">
-            <!-- The Challenge -->
+            <!-- 01 The Challenge -->
             <section class="article-section">
-              <h2>The Challenge</h2>
+              <h2>01. The Challenge</h2>
               <p>
                 Climate data is complex and often overwhelming for non-technical stakeholders. Traditional dashboards present too much information at once, 
                 making it difficult for decision-makers to identify key trends and ask meaningful questions about data.
               </p>
               <blockquote class="article-pullquote">
-                "Information overload prevents effective decision-making and reduces stakeholder engagement with climate data."
+                "From data to wow: maximizing the data to wow ratio, transforming chaos to clarity, input to impact."
               </blockquote>
               <p>
                 The Environmental Research Organization needed a way to make their extensive climate datasets accessible to policy makers, 
@@ -103,9 +102,9 @@
               </p>
             </section>
 
-            <!-- The Solution -->
+            <!-- 02 The Solution -->
             <section class="article-section">
-              <h2>The Solution</h2>
+              <h2>02. The Solution</h2>
               <p>
                 I created an interactive exploration tool that guides users through climate indicators progressively. The interface uses 
                 small multiples, contextual annotations, and guided exploration to help users understand patterns without 
@@ -128,9 +127,9 @@
               </div>
             </section>
 
-            <!-- Technical Implementation -->
+            <!-- 03 Technical Implementation -->
             <section class="article-section">
-              <h2>Technical Implementation</h2>
+              <h2>03. Technical Implementation</h2>
               <p>
                 Built with Observable and D3.js, the tool uses reactive patterns to handle large datasets efficiently. 
                 The visualization updates smoothly as users explore different time ranges and indicators.
@@ -147,9 +146,9 @@
               </div>
             </section>
 
-            <!-- Results -->
+            <!-- 04 Results -->
             <section class="article-section">
-              <h2>Impact & Results</h2>
+              <h2>04. Results</h2>
               <div class="results-metrics">
                 <div class="metric">
                   <div class="metric-number">40%</div>
@@ -174,9 +173,9 @@
               </p>
             </section>
 
-            <!-- Lessons Learned -->
+            <!-- 05 Lessons Learned -->
             <section class="article-section">
-              <h2>Lessons Learned</h2>
+              <h2>05. Lessons Learned</h2>
               <p>
                 This project reinforced the importance of progressive disclosure in data visualization. Rather than overwhelming users 
                 with all available data at once, guiding them through a structured exploration process leads to better understanding 
@@ -224,58 +223,66 @@
             <h2 class="section-title">More Projects</h2>
             <p class="section-subtitle">Explore similar work in data visualization and analysis.</p>
           </div>
-          
-          <div class="thumbnail-grid">
-            <article class="thumbnail-card">
-              <img src="images/performance-dashboard.png" alt="Performance monitoring dashboard" class="thumbnail-image">
-              <div class="thumbnail-content">
-                <div class="thumbnail-top">
-                  <span class="mono">Dashboard</span>
-                  <span class="pill">Design system</span>
+          <div class="gallery-grid">
+            <!-- Active Project -->
+            <article class="gallery-item">
+              <a href="project-climate-explorer.html" class="gallery-link">
+                <img src="images/climate-indicators-explorer.svg" alt="Climate indicators explorer interface" class="gallery-image">
+                <div class="gallery-content">
+                  <h3 class="gallery-title">Climate indicators explorer</h3>
+                  <p class="gallery-description">A fast, readable interface for exploring indicators over time with annotations and small multiples.</p>
+                  <div class="gallery-meta">
+                    <span class="mono">Interactive</span>
+                    <span class="pill">Observable / D3</span>
+                  </div>
                 </div>
-                <h3 class="thumbnail-title">Performance monitoring</h3>
-                <p class="thumbnail-body">Dashboard that prioritizes hierarchy and comparability.</p>
-              </div>
+              </a>
             </article>
-            
-            <article class="thumbnail-card">
-              <img src="images/distribution-explainer.png" alt="Distribution explainer with annotated charts" class="thumbnail-image">
-              <div class="thumbnail-content">
-                <div class="thumbnail-top">
-                  <span class="mono">Explainer</span>
-                  <span class="pill">Long-form</span>
+
+            <!-- Commented out projects for future use
+            <article class="gallery-item">
+              <a href="#" class="gallery-link">
+                <img src="images/performance-dashboard.svg" alt="Performance monitoring dashboard" class="gallery-image">
+                <div class="gallery-content">
+                  <h3 class="gallery-title">Performance monitoring dashboard</h3>
+                  <p class="gallery-description">Real-time system health with automated alerts and historical trend analysis.</p>
+                  <div class="gallery-meta">
+                    <span class="mono">Dashboard</span>
+                    <span class="pill">React / D3</span>
+                  </div>
                 </div>
-                <h3 class="thumbnail-title">Distribution analysis</h3>
-                <p class="thumbnail-body">Narrative explainer with annotated charts.</p>
-              </div>
+              </a>
             </article>
-            
-            <article class="thumbnail-card">
-              <img src="images/small-multiple-comparison.svg" alt="Small multiple comparison charts" class="thumbnail-image">
-              <div class="thumbnail-content">
-                <div class="thumbnail-top">
-                  <span class="mono">Prototype</span>
-                  <span class="pill">Research</span>
+
+            <article class="gallery-item">
+              <a href="#" class="gallery-link">
+                <img src="images/distribution-explainer.svg" alt="Distribution explainer with annotated charts" class="gallery-image">
+                <div class="gallery-content">
+                  <h3 class="gallery-title">What the distribution hides</h3>
+                  <p class="gallery-description">Interactive narrative explaining statistical concepts through visual examples.</p>
+                  <div class="gallery-meta">
+                    <span class="mono">Explainer</span>
+                    <span class="pill">D3 / Static</span>
+                  </div>
                 </div>
-                <h3 class="thumbnail-title">Small-multiple comparison</h3>
-                <p class="thumbnail-body">Reusable template for comparing categories.</p>
-              </div>
+              </a>
             </article>
+            -->
           </div>
         </div>
       </section>
+
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
         <div>
           <div class="footer-brand">FYI Lab</div>
-          <p class="footer-copy">© 2024 FYI Lab. Transforming complex data into clear decisions.</p>
+          <p class="footer-copy"> 2024 FYI Lab. Transforming complex data into clear decisions.</p>
         </div>
         <div class="footer-links">
           <a class="text-link" href="mailto:hello@fyilab.is">hello@fyilab.is</a>
           <a class="text-link" href="projects.html">Projects</a>
-          <a class="text-link" href="writing.html">Writing</a>
           <a class="text-link" href="about.html">About</a>
         </div>
       </div>
