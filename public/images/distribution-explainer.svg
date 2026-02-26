@@ -1,0 +1,15 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="#f8fafc"/>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="24" fill="#475569" text-anchor="middle">Distribution Explainer</text>
+  <text x="400" y="220" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">Data storytelling with annotated charts</text>
+  <path d="M 100 300 Q 400 200 700 300" stroke="url(#grad3)" stroke-width="4" fill="none"/>
+  <circle cx="250" cy="250" r="8" fill="#f59e0b"/>
+  <circle cx="400" cy="230" r="8" fill="#f59e0b"/>
+  <circle cx="550" cy="250" r="8" fill="#f59e0b"/>
+</svg>

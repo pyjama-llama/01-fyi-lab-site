@@ -1,0 +1,59 @@
+{
+    "nav": {
+        "work": "Verkefni",
+        "projects": "Safn",
+        "gallery": "Myndasafn",
+        "about": "Um mig",
+        "writing": "Skrif",
+        "contact": "Hafa samband"
+    },
+    "hero": {
+        "kicker": "Sjálfstæð gagnasýn dýpkar",
+        "title": "FYI Lab",
+        "subtitle": "Gagnasýn, greining og skýr miðlun fyrir teymi sem koma hlutum í verk. Staðsett í Reykjavík.",
+        "cta_projects": "Skoða verkefni",
+        "cta_about": "Vinnulag",
+        "focus_label": "Áhersla",
+        "focus_value": "Söguþráður, mælaborð, útskýringar",
+        "tools_label": "Tól",
+        "tools_value": "React, D3, Observable, Python",
+        "timezone_label": "Tímabelti",
+        "timezone_value": "UTC"
+    },
+    "home": {
+        "featured_title": "01. Helstu verkefni",
+        "featured_subtitle1": "Hnitmiðað safn fyrir skýra hugsun",
+        "featured_subtitle2": "Stutt verkefni, skarp sýn og áhersla á að koma hlutum í loftið.",
+        "browse_link": "Skoða öll verkefni",
+        "services_title": "02. Frá gögnum að áhrifum: Heildarlausnir",
+        "services_subtitle": "Brúum bilið milli flókinna gagna og nýtanlegra upplýsinga með sérsniðinni gagnasýn, sjálfvirkum mælaborðum og þjálfun.",
+        "makeover_title": "03. Umbreytingar: Fyrir og eftir",
+        "makeover_subtitle": "Dragðu stikuna til að sjá umbreytingu frá óreglu til skýrleika",
+        "cta_footer_title": "Tilbúin(n) í uppfærslu?",
+        "cta_footer_subtitle": "Sendu mér þína flóknustu framsetningu og ég sýni þér hvernig má umbreyta henni"
+    },
+    "services": {
+        "custom_title": "Sérsniðin Gagnasýn",
+        "custom_body": "Frá ringulreið til skýrleika: Umbreytum flóknum gagnasöfnum í skýrar, nýtanlegar upplýsingar sem drífa áfram betri ákvarðanir.",
+        "dashboard_title": "Sjálfvirk Mælaborð",
+        "dashboard_body": "Frá inntaki að áhrifum: Hönnun á sjálfvirkum mælaborðum sem eru hröð, skýr og draga úr misskilningi.",
+        "story_title": "Gagnamiðlun & Þjálfun",
+        "story_body": "Frá gögnum að áhrifum: Sköpum sérsniðnar gagnasögur og þjálfum næstu kynslóð gagnadrifinna leiðtoga.",
+        "availability_title": "Laus rýmd",
+        "availability_body": "FYI Lab er rekið af einum aðila. Bestu verkefnin byrja með stuttu spjalli og skýru markmiði."
+    },
+    "projects": {
+        "kicker": "Valin verk",
+        "title": "Verkefnaskrá",
+        "subtitle": "Lítið safn af verkefnum sem spanna gagnvirka eiginleika, mælaborð og gagnaskýringar."
+    },
+    "footer": {
+        "location": "Reykjavík, Ísland",
+        "copy": "© 2024 FYI Lab. Umbreytum flóknum gögnum í skýrar ákvarðanir."
+    },
+    "gallery": {
+        "kicker": "Valdar myndir",
+        "title": "Myndasafn gagna",
+        "subtitle": "Sérvalið safn af stökum myndum, tilraunum og brotum úr stærri verkefnum."
+    }
+}

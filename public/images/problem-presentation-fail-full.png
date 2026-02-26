@@ -1,0 +1,9 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  <text x="400" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#666">Presentation Fail - Full Example</text>
+  <text x="400" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#999">Treating presentation like a document</text>
+  <rect x="100" y="250" width="600" height="100" fill="white" stroke="#ddd"/>
+  <text x="400" y="280" text-anchor="middle" font-family="monospace" font-size="10" fill="#666">This slide contains way too much information that should be broken down</text>
+  <text x="400" y="300" text-anchor="middle" font-family="monospace" font-size="10" fill="#666">into multiple slides. Presentations are billboards - they must communicate</text>
+  <text x="400" y="320" text-anchor="middle" font-family="monospace" font-size="10" fill="#666">instantly. Documents are for deep reading and detailed analysis.</text>
+</svg>

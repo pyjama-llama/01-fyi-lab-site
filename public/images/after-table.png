@@ -1,0 +1,13 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  <text x="400" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#666">After: Visual Summary</text>
+  <text x="400" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#999">Clear patterns, drill-down options</text>
+  <rect x="150" y="250" width="100" height="120" fill="#4ecdc4"/>
+  <rect x="280" y="270" width="100" height="100" fill="#45b7d1"/>
+  <rect x="410" y="260" width="100" height="110" fill="#96ceb4"/>
+  <rect x="540" y="280" width="100" height="90" fill="#ffeaa7"/>
+  <text x="200" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">Q1</text>
+  <text x="330" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">Q2</text>
+  <text x="460" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">Q3</text>
+  <text x="590" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">Q4</text>
+</svg>

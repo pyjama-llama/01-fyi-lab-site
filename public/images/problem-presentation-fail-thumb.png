@@ -1,0 +1,9 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  <text x="200" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#666">Presentation Fail</text>
+  <text x="200" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#999">Business Slide Example</text>
+  <rect x="50" y="180" width="300" height="80" fill="white" stroke="#ddd"/>
+  <text x="200" y="210" text-anchor="middle" font-family="monospace" font-size="8" fill="#666">Too much text on this slide that should be simplified...</text>
+  <text x="200" y="225" text-anchor="middle" font-family="monospace" font-size="8" fill="#666">Presentations are billboards, not documents...</text>
+  <text x="200" y="240" text-anchor="middle" font-family="monospace" font-size="8" fill="#666">One idea per slide, large text, clear visuals...</text>
+</svg>
