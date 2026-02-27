@@ -1,0 +1,14 @@
+# FYI Lab React - Global AI Instructions
+
+## Visuals & Project Assets (The Golden Rule)
+To keep the website repository lightweight and fast, you must **never bulk-drop raw or working files directly into the React codebase.** 
+
+Always enforce this workflow when adding projects:
+1. **Master Folder (Outside the Codebase):** The user keeps all high-res originals, working files, and dozen of screenshots in a completely separate folder on their hard drive (e.g., `02_victor_images_for_fyi_site/[project-name]/`). 
+2. **Curate and Rename:** Instruct the user to review their master folder and select *only* the final, polished images they want to display on the live site, and rename them cleanly (e.g., `01_overview.png`, `02_house_effects.png`).
+3. **Copy to Production:** Only those final, curated images should be copied into the actual React repository at: `fyi-lab-react/public/images/projects/[project-name]/`
+
+## Code Standards
+- **Routing:** Built with React Router (DOM v6+).
+- **Styling:** CSS exclusively. Do not switch to Tailwind or CSS modules without the user's explicit request. Follow the CSS variable conventions established in `src/index.css`.
+- **Data:** All project data must remain centralized in `src/data/projects.ts` inside the `PROJECTS` array. Do not hardcode project details into layout components.
