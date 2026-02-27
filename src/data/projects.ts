@@ -15,26 +15,92 @@ export interface Project {
     result: string;
     tools: string[];
     externalUrl?: string;      // Link to live project, if applicable
+    charts?: { title: string, caption: string, imageSrc: string }[]; // Custom charts for detail view
+    makeovers?: {
+        beforeImage: string,
+        afterImage: string,
+        beforeLabel: string,
+        afterLabel: string,
+        result: string
+    }[]; // Interactive before/after sliders
 }
 
 export const PROJECTS: Project[] = [
     {
-        id: 'climate-explorer',
-        title: 'Climate Indicators Explorer',
+        id: 'the-voting-booth',
+        title: 'The Voting Booth (Kjörklefinn)',
         type: 'Interactive',
-        tags: ['Observable / D3'],
-        tagline: 'A fast, readable interface for exploring indicators over time with annotations and small multiples.',
+        tags: ['React', 'D3.js', 'R'],
+        tagline: 'Making election polling data accessible to everyone.',
         description:
-            'An interactive data explorer letting users navigate hundreds of climate metrics across time and geography. Built for a regional research institute that needed its internal data to be accessible to non-specialist policymakers.',
-        imageSrc: '/images/climate-indicators-explorer.png',
+            'A volunteer project for the people of Iceland, including the blind and seeing disabled. Existing polling visualizations were poor at communicating their message, especially for people with ADHD as the high cognitive load is hard to handle. I built an entire menu of visual delicacies that should satisfy everyone’s appetite.',
+        imageSrc: '/images/projects/project-1/01_overview.png',
         challenge:
-            'The raw dataset contained 300+ indicators from 40 countries, updated quarterly. Existing tools (Excel, Power BI) required significant training and produced charts that were inconsistent and hard to share.',
+            'Existing polling visualizations are poor at communicating their message. Especially for people with ADHD as the high cognitive load is hard to handle.',
         solution:
-            'Built a responsive Observable notebook converted to a standalone React wrapper. Used D3 for rendering with React state for filters. Annotations are stored as a separate JSON layer so researchers can annotate data points without touching code.',
+            'I built an entire menu of visual delicacies that should satisfy everyone’s appetite. I\'ve animated the charts to make them more engaging and easier to understand. I\'ve also added a lot of interactivity. I\'ve strived to make the charts ARIA web content accessible, even adding a button for audio frequencies reflecting the data.',
         result:
-            'Adopted by three government departments and embedded in two public-facing reports. Time to generate a standard indicator chart dropped from ~45 minutes to under 30 seconds.',
-        tools: ['Observable', 'D3.js', 'React', 'Python (data prep)'],
-        externalUrl: undefined,
+            'An accessible, highly interactive suite of visualizations bridging the gap between raw polling data and public understanding.',
+        tools: ['React', 'D3.js', 'R'],
+        externalUrl: 'https://kjorklefinn.is',
+        charts: [
+            {
+                title: 'Overview',
+                caption: 'Animated election polling data overview.',
+                imageSrc: '/images/projects/project-1/01_overview.png'
+            },
+            {
+                title: 'Coalition % following over time',
+                caption: 'On the interactive website, users can select different coalitions and see how they are polling over time.',
+                imageSrc: '/images/projects/project-1/02_coalition_viability.png'
+            },
+            {
+                title: 'Visualizing Coalition Viability',
+                caption: 'An award winning plot for visualizing sets, different coalitions, and their intersections. UpSet, a popular data visualization technique for displaying intersecting sets, was awarded the IEEE InfoVis 10-year Test of Time Award in 2024.',
+                imageSrc: '/images/projects/project-1/03_upset_plot_coaltion.png'
+            },
+            {
+                title: 'Animated Loess smoothing of different election polls',
+                caption: 'Loess is a way to show you the direction a bunch of data is trending. (It\'s a non-parametric method for smoothing data).',
+                imageSrc: '/images/projects/project-1/04_loess_animated.png'
+            },
+            {
+                title: 'Polling data bias analysis (aka the "House Effect")',
+                caption: 'The Independence party consistently polls higher with Gallup than with other pollsters, whereas they have Liberal Reform lower than other pollsters.',
+                imageSrc: '/images/projects/project-1/05_house_effect_box_plot.png'
+            },
+            {
+                title: 'House Effect Small Multiples',
+                caption: 'Seeing how different pollsters poll political parties over time.',
+                imageSrc: '/images/projects/project-1/06_house_effects_small_multiples.png'
+            },
+            {
+                title: 'Animated & Interactive Chord Diagram',
+                caption: 'Shows party retention rates and how they would vote today vs last election. This is a fun chart.',
+                imageSrc: '/images/projects/project-1/07_chord.png'
+            },
+            {
+                title: 'Variance heatmap by party and demographic',
+                caption: 'We look at the party\'s average vote and compare it to the % vote in that demographic, to show over vs under indexed. This table of table heatmap is great for quickly seeing where you are performing well or poorly.',
+                imageSrc: '/images/projects/project-1/09_heatmap_frávik.png'
+            }
+        ],
+        makeovers: [
+            {
+                beforeImage: '/images/projects/project-1/11_before_demographics_maskina.png',
+                afterImage: '/images/projects/project-1/14_demographics_two_party.png',
+                beforeLabel: 'Before: Difficult to understand what the chart is saying',
+                afterLabel: 'After: Easy to have a conversation with the chart',
+                result: '95% reduction in cognitive load. People can now have a conversation with the chart instead of struggling to understand it. Tested well with people with ADHD because the chart wasn\'t overwhelming / yelling at the user all at once.'
+            },
+            {
+                beforeImage: '/images/projects/project-1/13_gallup_fylgi_flokka.png',
+                afterImage: '/images/projects/project-1/15_fylgi_flokka.png',
+                beforeLabel: 'Before: Rotated date labels and legend far away from the data',
+                afterLabel: 'After: Legend close to the data and proper date labels',
+                result: '99% reduction in cognitive load. Performed test using before and after chart, asking users to "find the latest poll for each party, arrange it in descending order of support".'
+            }
+        ]
     },
     {
         id: 'performance-dashboard',

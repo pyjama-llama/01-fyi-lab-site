@@ -46,26 +46,26 @@ body {
   line-height: 1.45;
 }
 
- .bg-canvas {
-   position: fixed;
-   inset: 0;
-   width: 100vw;
-   height: 100vh;
-   z-index: 0;
-   pointer-events: none;
-   opacity: 0.65;
- }
+.bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.65;
+}
 
- :root[data-theme="dark"] .bg-canvas {
-   opacity: 0.75;
- }
+:root[data-theme="dark"] .bg-canvas {
+  opacity: 0.75;
+}
 
- header,
- main,
- footer {
-   position: relative;
-   z-index: 1;
- }
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
 
 a {
   color: inherit;
@@ -291,11 +291,9 @@ a:hover {
 .panel-card {
   border-radius: calc(var(--radius) + 4px);
   border: 1px solid var(--border);
-  background: linear-gradient(
-      180deg,
+  background: linear-gradient(180deg,
       color-mix(in oklab, var(--surface) 85%, transparent),
-      color-mix(in oklab, var(--surface-2) 92%, transparent)
-    );
+      color-mix(in oklab, var(--surface-2) 92%, transparent));
   padding: 18px;
   box-shadow: 0 30px 70px var(--shadow);
 }
@@ -375,8 +373,20 @@ a:hover {
 
 .section-title {
   margin: 0;
-  font-size: 22px;
-  letter-spacing: -0.02em;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-family: var(--mono);
+}
+
+.section-impact {
+  margin: 4px 0 16px 0;
+  font-size: clamp(28px, 4vw, 36px);
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.1;
 }
 
 .section-subtitle {
@@ -499,11 +509,9 @@ a:hover {
   border: 1px solid var(--border);
   border-radius: calc(var(--radius) + 4px);
   padding: 16px;
-  background: linear-gradient(
-      180deg,
+  background: linear-gradient(180deg,
       color-mix(in oklab, var(--surface) 95%, transparent),
-      color-mix(in oklab, var(--surface-2) 90%, transparent)
-    );
+      color-mix(in oklab, var(--surface-2) 90%, transparent));
   box-shadow: 0 30px 70px var(--shadow);
 }
 
@@ -976,11 +984,11 @@ a:hover {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  
+
   .article-content {
     max-width: none;
   }
-  
+
   .article-sidebar {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -992,25 +1000,25 @@ a:hover {
   .article-hero-image {
     height: 300px;
   }
-  
+
   .article-section h2 {
     font-size: 24px;
   }
-  
+
   .article-section p {
     font-size: 16px;
   }
-  
+
   .article-pullquote {
     font-size: 20px;
     padding: 20px;
   }
-  
+
   .results-metrics {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .metric-number {
     font-size: 28px;
   }
@@ -1020,20 +1028,20 @@ a:hover {
   .article-hero-image {
     height: 250px;
   }
-  
+
   .article-section h2 {
     font-size: 22px;
   }
-  
+
   .article-section p {
     font-size: 15px;
   }
-  
+
   .article-pullquote {
     font-size: 18px;
     padding: 16px;
   }
-  
+
   .article-sidebar {
     grid-template-columns: 1fr;
   }

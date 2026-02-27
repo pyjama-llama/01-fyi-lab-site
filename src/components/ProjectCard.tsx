@@ -21,6 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     layout = 'standard'
 }) => {
     const isExternal = link.startsWith('http');
+
     const cardContent = (
         <>
             <img src={imageSrc} alt={`${title} preview`} className="card-image" />
