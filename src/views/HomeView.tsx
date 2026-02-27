@@ -166,9 +166,9 @@ const HomeView: React.FC = () => {
                                 whileHover={{ y: -4, boxShadow: '0 20px 40px var(--shadow)' }}
                             >
                                 <div style={{ position: 'absolute', top: 0, left: 0, width: '4px', height: '100%', background: 'var(--accent)' }} />
-                                <span className="kicker" style={{ color: 'var(--accent)', marginBottom: '8px', display: 'block' }}>DATA TO WOW</span>
+                                <span className="kicker" style={{ color: 'var(--accent)', marginBottom: '8px', display: 'block' }}>COMPLEXITY TO NARRATIVE</span>
                                 <h3 className="service-title">{t('services.story_title')}</h3>
-                                <p className="service-body">{t('services.story_body').replace('From data to wow: ', '')}</p>
+                                <p className="service-body">{t('services.story_body')}</p>
                             </motion.div>
 
                             <motion.div
@@ -177,7 +177,7 @@ const HomeView: React.FC = () => {
                                 whileHover={{ y: -4, boxShadow: '0 20px 40px var(--shadow)' }}
                             >
                                 <div style={{ position: 'absolute', top: 0, left: 0, width: '4px', height: '100%', background: 'var(--accent)' }} />
-                                <span className="kicker" style={{ color: 'var(--accent)', marginBottom: '8px', display: 'block' }}>IDEAS TO CORE MESSAGE</span>
+                                <span className="kicker" style={{ color: 'var(--accent)', marginBottom: '8px', display: 'block' }}>IDEAS TO CAPABILITY</span>
                                 <h3 className="service-title">{t('services.workshop_title')}</h3>
                                 <p className="service-body">{t('services.workshop_body')}</p>
                             </motion.div>
