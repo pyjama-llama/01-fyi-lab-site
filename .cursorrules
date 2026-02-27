@@ -10,5 +10,10 @@ Always enforce this workflow when adding projects:
 
 ## Code Standards
 - **Routing:** Built with React Router (DOM v6+).
-- **Styling:** CSS exclusively. Do not switch to Tailwind or CSS modules without the user's explicit request. Follow the CSS variable conventions established in `src/index.css`.
 - **Data:** All project data must remain centralized in `src/data/projects.ts` inside the `PROJECTS` array. Do not hardcode project details into layout components.
+
+## Git & Version Control (Strict Rules)
+- **NEVER code directly on `main`.**
+- **NEVER push directly to `main`.**
+- All work must be done on a dedicated branch (e.g., `feature/your-feature-name` or `fix/issue-name`).
+- Only the USER has the authority to approve a push to the `main` branch or merge branches into `main`. Always push your feature branch upstream and instruct the user to review and merge via Pull Request or direct merge.

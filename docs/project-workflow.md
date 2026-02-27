@@ -36,3 +36,8 @@ I will then take over and:
 1. Wire up the data in `src/data/projects.ts`.
 2. Automatically generate the new `/projects/[id]` route.
 3. Build out any custom layout blocks (like the before/after slider or embedded interactive charts) specifically for that project.
+
+## 4. Version Control (Strict Branching)
+- **Do not work on the `main` branch.** All changes (code, copy, or UI) must be executed on a dedicated feature branch (e.g., `feature/add-project-name`).
+- AI agents are explicitly forbidden from pushing directly to the `main` branch remotely.
+- Agents must push the feature branch to GitHub, then notify the user. **Only the user** has the final authority to merge changes into the `main` branch to ensure absolute stability of the live site.
