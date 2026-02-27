@@ -47,10 +47,10 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
             onPointerCancel={handlePointerUp}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            style={{ touchAction: 'none', cursor: 'ew-resize' }}
+            style={{ touchAction: 'none', cursor: 'ew-resize', userSelect: 'none', WebkitUserSelect: 'none' }}
         >
             <div className="comparison-before">
-                <img src={beforeImage} alt="Before" className="comparison-image" draggable="false" />
+                <img src={beforeImage} alt="Before" className="comparison-image" draggable="false" style={{ pointerEvents: 'none' }} />
                 <span className="comparison-label" style={{ opacity: isHovered ? 1 : 0.7, transition: 'opacity 0.2s' }}>{beforeLabel}</span>
             </div>
 
@@ -58,7 +58,7 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
                 className="comparison-after"
                 style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
-                <img src={afterImage} alt="After" className="comparison-image" draggable="false" />
+                <img src={afterImage} alt="After" className="comparison-image" draggable="false" style={{ pointerEvents: 'none' }} />
                 <span className="comparison-label" style={{ opacity: isHovered ? 1 : 0.7, transition: 'opacity 0.2s' }}>{afterLabel}</span>
             </div>
 

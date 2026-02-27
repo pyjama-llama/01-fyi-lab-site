@@ -4,6 +4,26 @@ All project information on the FYI Lab website lives in a single, perfectly stru
 
 Whenever you want to update a project, add a new one, or rewrite the copy, you **do not** need to edit the website's layout components. You just need to update the data file, and the site will rebuild itself around your content.
 
+---
+
+## The Golden Rule: The Image Staging Workflow
+
+To keep the website repository lightweight and fast, **never bulk-drop your raw or working files directly into the React codebase.** Instead, follow this exact workflow:
+
+1. **Establish a Master Folder (Outside the Codebase):**
+   Keep all your high-res originals, working files, and dozens of screenshots in a completely separate folder on your hard drive (e.g., `02_victor_images_for_fyi_site/[project-name]/`). Keep this messy.
+2. **Curate and Rename:**
+   Review your master folder and select *only* the final, polished images you actually want to display on the live site. Rename them cleanly (e.g., `01_overview.png`, `02_house_effects.png`).
+3. **Copy to Production:**
+   Copy *only* those final, curated images into the actual React repository: 
+   `fyi-lab-react/public/images/projects/[project-name]/`
+4. **Draft the Text:**
+   Use your markdown drafts (like `docs/project-1-draft.md`) to write out the exact titles, tooltips, and file paths for these final images before touching the code.
+
+By doing this, you ensure the live website never gets bloated with unused mega-files, and your `projects.ts` data perfectly matches the strictly curated images.
+
+---
+
 ## Section 1: Where the data lives
 Open this file in your code editor:
 `src/data/projects.ts`
