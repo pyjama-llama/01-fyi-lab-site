@@ -82,7 +82,7 @@ const Header: React.FC = () => {
                         )}
                     </button>
 
-                    <a className="nav-link" href="mailto:hello@fyilab.is">{t('nav.contact')}</a>
+                    <a className="nav-link" href="mailto:victor.blaer@fyi-lab.is">{t('nav.contact')}</a>
                 </div>
             </div>
         </header>

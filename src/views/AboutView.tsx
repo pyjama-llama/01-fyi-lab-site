@@ -72,7 +72,7 @@ const AboutView: React.FC = () => {
                         <p style={{ fontSize: '18px', lineHeight: 1.6, marginBottom: '24px', opacity: 0.9 }}>
                             {t('about.pitch_body', 'Whether you\'re a lean startup, a growing NGO, or a researcher with a breakthrough—you deserve the same level of clarity and visual storytelling that the Fortune 500 rely on.')}
                         </p>
-                        <a className="button" style={{ background: 'var(--bg)', color: 'var(--accent-2)', border: 'none' }} href="mailto:hello@fyilab.is">
+                        <a className="button" style={{ background: 'var(--bg)', color: 'var(--accent-2)', border: 'none' }} href="mailto:victor.blaer@fyi-lab.is">
                             {t('about.cta', 'Let\'s talk about your data')}
                         </a>
                     </div>

@@ -248,7 +248,7 @@ const ProjectDetailView: React.FC = () => {
                             View live project
                         </a>
                     )}
-                    <a className="button" href="mailto:hello@fyilab.is?subject=Project%20Inquiry">
+                    <a className="button" href="mailto:victor.blaer@fyi-lab.is?subject=Project%20Inquiry">
                         Start a similar project
                     </a>
                     <Link className="button" to="/projects">

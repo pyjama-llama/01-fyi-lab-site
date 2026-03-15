@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                     </p>
                 </div>
                 <div className="footer-links">
-                    <a className="text-link" href="mailto:hello@fyilab.is">hello@fyilab.is</a>
+                    <a className="text-link" href="mailto:victor.blaer@fyi-lab.is">victor.blaer@fyi-lab.is</a>
                     <Link className="text-link" to="/projects">{t('nav.projects')}</Link>
                     <Link className="text-link" to="/about">{t('nav.about')}</Link>
                     <Link

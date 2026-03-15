@@ -51,7 +51,16 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
         >
             <div className="comparison-before">
                 <img src={beforeImage} alt="Before" className="comparison-image" draggable="false" style={{ pointerEvents: 'none' }} />
-                <span className="comparison-label" style={{ opacity: isHovered ? 1 : 0.7, transition: 'opacity 0.2s' }}>{beforeLabel}</span>
+                <span className="comparison-label" style={{
+                    opacity: isHovered ? 1 : 0.7,
+                    transition: 'opacity 0.2s',
+                    right: 0,
+                    left: 'auto',
+                    width: 'auto',
+                    borderRadius: '6px',
+                    margin: '12px',
+                    padding: '8px 16px'
+                }}>{beforeLabel}</span>
             </div>
 
             <div
@@ -59,7 +68,16 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
                 style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
                 <img src={afterImage} alt="After" className="comparison-image" draggable="false" style={{ pointerEvents: 'none' }} />
-                <span className="comparison-label" style={{ opacity: isHovered ? 1 : 0.7, transition: 'opacity 0.2s' }}>{afterLabel}</span>
+                <span className="comparison-label" style={{
+                    opacity: isHovered ? 1 : 0.7,
+                    transition: 'opacity 0.2s',
+                    left: 0,
+                    right: 'auto',
+                    width: 'auto',
+                    borderRadius: '6px',
+                    margin: '12px',
+                    padding: '8px 16px'
+                }}>{afterLabel}</span>
             </div>
 
             <div

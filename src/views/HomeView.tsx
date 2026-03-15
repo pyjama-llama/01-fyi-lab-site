@@ -186,7 +186,7 @@ const HomeView: React.FC = () => {
                         <div className="callout" style={{ position: 'sticky', top: '100px' }}>
                             <h3 className="callout-title">{t('services.availability_title')}</h3>
                             <p className="callout-body">{t('services.availability_body')}</p>
-                            <a className="button button-primary" href="mailto:hello@fyilab.is?subject=FYI%20Lab%20project">Email hello@fyilab.is</a>
+                            <a className="button button-primary" href="mailto:victor.blaer@fyi-lab.is?subject=FYI%20Lab%20project">Email victor.blaer@fyi-lab.is</a>
                         </div>
                     </div>
                 </div>
@@ -223,7 +223,7 @@ const HomeView: React.FC = () => {
                         <p className="section-subtitle" style={{ marginTop: '8px', marginBottom: '24px' }}>{t('home.cta_footer_subtitle')}</p>
                     </div>
                     <div className="hero-cta" style={{ justifyContent: 'center' }}>
-                        <a className="button button-primary" href="mailto:hello@fyilab.is?subject=Chart%20Makeover%20Request">Get your free makeover</a>
+                        <a className="button button-primary" href="mailto:victor.blaer@fyi-lab.is?subject=Chart%20Makeover%20Request">Get your free makeover</a>
                         <Link className="button" to="/about">See my process</Link>
                     </div>
                 </div>
