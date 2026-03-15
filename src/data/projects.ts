@@ -138,4 +138,18 @@ export const PROJECTS: Project[] = [
         tools: ['D3.js', 'Scrollama', 'Python (data)'],
         externalUrl: undefined,
     },
+    {
+        id: 'epstein-forensic',
+        title: 'Epstein Network — Forensic Financial Analysis',
+        type: 'Interactive',
+        tags: ['D3.js', 'Vite', 'Network Graph'],
+        tagline: 'An interactive forensic financial network graph mapping $557M in documented wire transfers.',
+        description: 'An interactive forensic financial network graph mapping $557,952,981 in documented wire transfers across 141 entities and 382 transactions (2009–2019) connected to the Jeffrey Epstein financial network. The forensic financial data and analysis were produced by R.S. Taylor.',
+        imageSrc: '/images/projects/epstein-forensic/01_overview.png',
+        challenge: 'Visualizing a highly complex and sensitive financial network comprising hundreds of transactions and entities over a decade to allow for forensic analysis.',
+        solution: 'Built an interactive network visualization with interactive zooming, filtering, and entity search capabilities to explore the money flow transparently.',
+        result: 'A performant and accessible investigative tool that makes half a billion dollars of complex wire transfers explorable.',
+        tools: ['D3.js', 'Fuse.js', 'Vite', 'React'],
+        externalUrl: 'https://pyjama-llama.github.io/epstein-network-financial-forensic-dashboard/index.html',
+    }
 ];
