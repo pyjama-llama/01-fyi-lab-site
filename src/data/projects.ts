@@ -151,5 +151,17 @@ export const PROJECTS: Project[] = [
         result: 'A performant and accessible investigative tool that makes half a billion dollars of complex wire transfers explorable.',
         tools: ['D3.js', 'Fuse.js', 'Vite', 'React'],
         externalUrl: 'https://pyjama-llama.github.io/epstein-network-financial-forensic-dashboard/index.html',
+        charts: [
+            {
+                title: 'Forensic Network Overview',
+                caption: 'An interactive mapping of $557,952,981 in documented wire transfers across 141 entities and 382 transactions between 2009 and 2019.',
+                imageSrc: '/images/projects/epstein-forensic/01_overview.png'
+            },
+            {
+                title: 'Transaction Entity Analysis',
+                caption: 'Tracking the flow and volume of transactions across the network\'s most heavily utilized financial nodes over time.',
+                imageSrc: '/images/projects/epstein-forensic/02_small_multiples.png'
+            }
+        ]
     }
 ];
