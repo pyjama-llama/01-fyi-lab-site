@@ -181,6 +181,17 @@ const HomeView: React.FC = () => {
                                 <h3 className="service-title">{t('services.workshop_title')}</h3>
                                 <p className="service-body">{t('services.workshop_body')}</p>
                             </motion.div>
+
+                            <motion.div
+                                className="service"
+                                style={{ padding: '24px', position: 'relative', overflow: 'hidden' }}
+                                whileHover={{ y: -4, boxShadow: '0 20px 40px var(--shadow)' }}
+                            >
+                                <div style={{ position: 'absolute', top: 0, left: 0, width: '4px', height: '100%', background: 'var(--accent)' }} />
+                                <span className="kicker" style={{ color: 'var(--accent)', marginBottom: '8px', display: 'block' }}>CONCEPT TO REALITY</span>
+                                <h3 className="service-title">{t('services.consulting_title')}</h3>
+                                <p className="service-body">{t('services.consulting_body')}</p>
+                            </motion.div>
                         </div>
 
                         <div className="callout" style={{ position: 'sticky', top: '100px' }}>

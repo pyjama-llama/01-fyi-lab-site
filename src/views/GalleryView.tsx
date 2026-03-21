@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import MediaRenderer from '../components/MediaRenderer';
 
 const GALLERY_ITEMS = [
     {
@@ -70,7 +71,7 @@ const GalleryView: React.FC = () => {
                                 <a href={item.link} style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
                                     <div style={{ width: '100%', aspectRatio: '3/2', overflow: 'hidden' }}>
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                                        <img
+                                        <MediaRenderer
                                             src={item.imageSrc}
                                             alt={item.title}
                                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}

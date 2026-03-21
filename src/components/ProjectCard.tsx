@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import MediaRenderer from './MediaRenderer';
 
 interface ProjectCardProps {
     title: string;
@@ -24,7 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
     const cardContent = (
         <>
-            <img src={imageSrc} alt={`${title} preview`} className="card-image" />
+            <MediaRenderer src={imageSrc} alt={`${title} preview`} className="card-image" />
             <div className="card-top">
                 <span className="mono">{type}</span>
                 <div style={{ display: 'flex', gap: '8px' }}>
