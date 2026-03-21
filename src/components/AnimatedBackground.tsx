@@ -52,15 +52,31 @@ function dnaPoints(cx: number, cy: number, count: number) {
     });
 }
 
-function getShapeTargets(count: number, w: number, h: number): { x: number; y: number }[] {
-    const cx = w / 2;
-    const cy = h / 2;
-    const idx = Math.floor(Math.random() * 4);
+function globePoints(cx: number, cy: number, radius: number, count: number) {
+    return Array.from({ length: count }, (_, i) => {
+        // Fibonacci sphere point distribution, mapped to 2D orthographic projection
+        const phi = Math.acos(1 - 2 * (i + 0.5) / count);
+        const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+
+        const x3d = Math.cos(theta) * Math.sin(phi);
+        const y3d = Math.sin(theta) * Math.sin(phi);
+        // z3d represents depth: Math.cos(phi), ignored for 2D orthographic projection
+
+        return {
+            x: cx + x3d * radius,
+            y: cy + y3d * radius
+        };
+    });
+}
+
+function getShapeTargets(count: number, w: number, h: number, cx: number, cy: number): { x: number; y: number }[] {
+    const idx = Math.floor(Math.random() * 5);
     switch (idx) {
         case 0: return polygonPoints(6, cx, cy, Math.min(w, h) * 0.22);       // hexagon
         case 1: return polygonPoints(3, cx, cy, Math.min(w, h) * 0.24);       // triangle
         case 2: return starPoints(cx, cy, Math.min(w, h) * 0.22, Math.min(w, h) * 0.1, 5); // star
         case 3: return dnaPoints(cx, cy, count);                                // double helix
+        case 4: return globePoints(cx, cy, Math.min(w, h) * 0.22, count);    // globe
         default: return polygonPoints(6, cx, cy, Math.min(w, h) * 0.22);
     }
 }
@@ -116,7 +132,14 @@ const NetworkBackground: React.FC = () => {
         const triggerShape = () => {
             if (!canvas) return;
             shapingRef.current = true;
-            const targets = getShapeTargets(NODE_COUNT, canvas.width, canvas.height);
+
+            // Allow the shapes to form anywhere within a safe 20% margin of the screen edges
+            const marginX = canvas.width * 0.2;
+            const marginY = canvas.height * 0.2;
+            const cx = marginX + Math.random() * (canvas.width - 2 * marginX);
+            const cy = marginY + Math.random() * (canvas.height - 2 * marginY);
+
+            const targets = getShapeTargets(NODE_COUNT, canvas.width, canvas.height, cx, cy);
             nodesRef.current.forEach((n, i) => {
                 const t = targets[i % targets.length];
                 n.tx = t.x;
