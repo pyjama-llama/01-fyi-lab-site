@@ -6,6 +6,7 @@ interface ProjectCardProps {
     title: string;
     description: string;
     imageSrc: string;
+    fallbackImageSrc?: string;
     link: string;
     tags: string[];
     type?: string;
@@ -16,6 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     title,
     description,
     imageSrc,
+    fallbackImageSrc,
     link,
     tags,
     type = "Interactive",
@@ -25,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
     const cardContent = (
         <>
-            <MediaRenderer src={imageSrc} alt={`${title} preview`} className="card-image" />
+            <MediaRenderer src={imageSrc} poster={fallbackImageSrc} alt={`${title} preview`} className="card-image" />
             <div className="card-top">
                 <span className="mono">{type}</span>
                 <div style={{ display: 'flex', gap: '8px' }}>

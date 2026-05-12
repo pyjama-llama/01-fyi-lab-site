@@ -9,6 +9,7 @@ export interface Project {
     tagline: string;           // One-liner for cards
     description: string;       // Longer paragraph for detail page
     imageSrc: string;          // Card thumbnail
+    fallbackImageSrc?: string; // Fallback image for video thumbnails (.mp4/.webm)
     heroSrc?: string;          // Full-width hero (falls back to imageSrc)
     challenge: string;
     solution: string;
@@ -26,6 +27,27 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
+    {
+        id: 'sveitakosningar-2026',
+        title: 'Borgarstjórnarkosningar 2026',
+        type: 'Interactive',
+        tags: ['D3.js', 'Vanilla JS', 'Scrollytelling'],
+        tagline: 'Hvaðan kemur fylgið? A visual breakdown of voter flow.',
+        description: 'An interactive scrollytelling chord diagram tracking voter intent from the 2022 Reykjavík city elections. It visualizes the flow of voters between different political parties over a 4-year period.',
+        imageSrc: '/images/projects/3-borgarstjornkosningar-2026/02_welcome_page.png',
+        challenge: 'Tracking complex voter shifts between 9 political parties over 4 years without overwhelming the reader.',
+        solution: 'A scrollytelling chord diagram that guides the user step-by-step through the major political shifts before showing the final complex voter flow.',
+        result: 'A highly engaging editorial piece that makes a complex matrix of voter transitions immediately legible.',
+        tools: ['D3.js', 'Vanilla JS', 'Scrollama'],
+        externalUrl: 'https://borgarstjornarkosningar-2026.fyi-lab.is',
+        charts: [
+            {
+                title: 'Hvaðan kemur fylgið?',
+                caption: 'The final interactive chord diagram showing all voter transitions between 2022 and 2026.',
+                imageSrc: '/images/projects/3-borgarstjornkosningar-2026/01_chord_hverjir_halda.png'
+            }
+        ]
+    },
     {
         id: 'the-voting-booth',
         title: 'The Voting Booth (Kjörklefinn)',
@@ -129,39 +151,46 @@ export const PROJECTS: Project[] = [
         ]
     },
     {
-        id: 'performance-dashboard',
-        title: 'Performance Monitoring Dashboard',
-        type: 'Dashboard',
-        tags: ['React / D3'],
-        tagline: 'Real-time system health with automated alerts and historical trend analysis.',
-        description:
-            'A production monitoring dashboard replacing a fragmented tool stack (Grafana + spreadsheets + weekly email summaries) with a single, purpose-built interface designed around how the operations team actually thinks about system health.',
-        imageSrc: '/images/performance-dashboard.png',
-        challenge:
-            'The team was managing 12+ separate Grafana dashboards and struggling to get a holistic picture within a 30-minute incident window. Alert fatigue was high because the thresholds were not contextual.',
-        solution:
-            'Designed the information architecture around three questions: Is everything OK right now? What changed in the last 24h? What is the trend over the last 30 days? Each layer only shows what matters at that time scale.',
-        result:
-            'Mean time to resolution (MTTR) for P1 incidents dropped 40%. The team decommissioned 9 of 12 legacy dashboards within the first quarter.',
-        tools: ['React', 'D3.js', 'WebSockets', 'PostgreSQL'],
-        externalUrl: undefined,
+        id: 'upset-plot-analysis',
+        title: 'Visualizing Coalition Viability (UpSet Plot)',
+        type: 'Chart Deep Dive',
+        tags: ['React', 'D3.js', 'Dataviz Theory'],
+        tagline: 'Why traditional Venn diagrams fail, and how UpSet plots solve the problem.',
+        description: 'During the Kjörklefinn project, I needed to show voters how different political coalitions overlap. Traditional Venn diagrams become an illegible mess with more than three sets. To solve this, I implemented an UpSet plot—a visualization technique specifically designed for complex intersections.',
+        imageSrc: '/images/projects/project-1/03_upset_plot_coaltion.png', // Assuming user will drop the Kjörklefinn image here
+        challenge: 'Visualizing the intersecting possibilities of a 9-party political system where voters need to see exactly which combinations of parties can form a majority government.',
+        solution: 'I built an interactive UpSet plot. Instead of overlapping circles, it uses a matrix of dots to show exactly which parties are involved in a coalition, paired with a bar chart showing their combined polling strength.',
+        result: 'The visualization was so effective at handling complexity that UpSet plots (the underlying technique) were awarded the IEEE InfoVis 10-year Test of Time Award in 2024. It completely eliminated the cognitive overload of traditional set visualization.',
+        tools: ['D3.js', 'React', 'UpSet Theory'],
+        externalUrl: 'https://kjorklefinn.is',
     },
     {
-        id: 'distribution-explainer',
-        title: 'What the Distribution Hides',
+        id: 'animated-loess-smoothing',
+        title: 'Animated Loess Smoothing',
+        type: 'Chart Deep Dive',
+        tags: ['D3.js', 'Animation', 'Statistics'],
+        tagline: 'Cutting through the noise of daily polling data with non-parametric smoothing.',
+        description: 'Raw polling data is incredibly noisy. If a party drops 1% in a single poll, the press often reports it as a crisis. To counteract this narrative whiplash for the Kjörklefinn project, I implemented an animated Loess (Locally Estimated Scatterplot Smoothing) curve.',
+        imageSrc: '/images/projects/project-1/04_loess_animated.mp4', 
+        fallbackImageSrc: '/images/projects/project-1/04_loess_animated.png',
+        challenge: 'The general public struggles to separate statistically significant trends from daily polling noise, leading to false narratives and confusion.',
+        solution: 'I used Loess to draw a trendline that heavily weights recent, local data points while ignoring extreme outliers. To make this statistical concept approachable, I animated the curve drawing itself over the raw data points.',
+        result: 'The animation instantly communicates direction and momentum without requiring the viewer to understand the underlying math. It prevents viewers from hyper-fixating on single, anomalous polls.',
+        tools: ['D3.js', 'R (for initial algorithm)', 'React'],
+        externalUrl: 'https://kjorklefinn.is',
+    },
+    {
+        id: 'house-effects-small-multiples',
+        title: 'What the Aggregate Hides (House Effects)',
         type: 'Explainer',
-        tags: ['D3 / Static'],
-        tagline: 'An annotated visual essay showing how aggregate statistics conceal structural inequalities.',
-        description:
-            'A long-form visual explainer commissioned for an internal leadership offsite. The goal was to make a statistical argument — that average-based reporting masks significant within-group variance — legible to a non-quantitative executive audience.',
-        imageSrc: '/images/distribution-explainer.png',
-        challenge:
-            'Previous internal analysis had shown the problem clearly in data, but the leadership team was not acting. The barrier was comprehension, not access — the charts required prior statistical knowledge to interpret correctly.',
-        solution:
-            'Rebuilt the argument as a scrollytelling narrative using D3 and step-triggered animations. Each transition in the chart was designed to answer one question before raising the next, moving from aggregates to distributions to individual stories.',
-        result:
-            'The piece was used in three consecutive quarterly reviews. Two structural reporting changes were implemented directly as a result of the insights it surfaced.',
-        tools: ['D3.js', 'Scrollama', 'Python (data)'],
-        externalUrl: undefined,
+        tags: ['D3.js', 'Data Bias', 'Small Multiples'],
+        tagline: 'An annotated visual essay showing how aggregate statistics conceal structural polling bias.',
+        description: 'A long-form visual explainer commissioned to highlight "House Effects"—the consistent statistical bias different polling companies have toward specific parties. The goal was to make this statistical argument legible to a non-quantitative public audience.',
+        imageSrc: '/images/projects/project-1/06_house_effects_small_multiples.png',
+        challenge: 'Previous aggregate analysis tracked the problem clearly in data, but the public barrier was comprehension, not access — traditional error margins required prior statistical knowledge to interpret correctly.',
+        solution: 'Rebuilt the argument using a "Small Multiples" approach. By splitting the pollsters into their own individual, identical mini-charts, the structural polling biases became instantly apparent without requiring any statistical training.',
+        result: 'The visualization successfully educated viewers on why different polls from the exact same week showed wildly varying results, increasing overall data literacy surrounding the election cycle.',
+        tools: ['D3.js', 'Python (data)'],
+        externalUrl: 'https://kjorklefinn.is',
     }
 ];

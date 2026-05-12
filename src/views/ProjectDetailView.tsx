@@ -14,6 +14,7 @@ const ProjectDetailView: React.FC = () => {
     }
 
     const heroSrc = project.heroSrc ?? project.imageSrc;
+    const heroFallback = project.fallbackImageSrc;
 
     return (
         <main id="content" className="page">
@@ -51,6 +52,7 @@ const ProjectDetailView: React.FC = () => {
                 >
                     <MediaRenderer
                         src={heroSrc}
+                        poster={heroFallback}
                         alt={project.title}
                         style={{
                             width: '100%',

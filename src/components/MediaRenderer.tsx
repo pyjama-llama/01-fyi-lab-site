@@ -5,10 +5,11 @@ interface MediaRendererProps {
     alt: string;
     className?: string;
     style?: React.CSSProperties;
+    poster?: string;
     onError?: (e: React.SyntheticEvent<HTMLImageElement | HTMLVideoElement, Event>) => void;
 }
 
-const MediaRenderer: React.FC<MediaRendererProps> = ({ src, alt, className, style, onError }) => {
+const MediaRenderer: React.FC<MediaRendererProps> = ({ src, alt, className, style, poster, onError }) => {
     const isVideo = src.match(/\.(mp4|webm)$/i);
 
     if (isVideo) {
@@ -17,6 +18,7 @@ const MediaRenderer: React.FC<MediaRendererProps> = ({ src, alt, className, styl
                 src={src}
                 className={className}
                 style={style}
+                poster={poster}
                 autoPlay
                 loop
                 muted
