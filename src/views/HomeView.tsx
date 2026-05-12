@@ -71,6 +71,7 @@ const HomeView: React.FC = () => {
                                     type={project.type}
                                     tags={project.tags}
                                     imageSrc={project.imageSrc}
+                                    fallbackImageSrc={project.fallbackImageSrc}
                                     link={`/projects/${project.id}`}
                                 />
                             </motion.div>
@@ -213,16 +214,17 @@ const HomeView: React.FC = () => {
                     </div>
 
                     <div className="makeover-slider">
-                        <div className="makeover-item">
-                            <h3 style={{ marginBottom: '16px' }}>The "Everything Dashboard" → Focused Insights</h3>
-                            <BeforeAfterSlider
-                                beforeImage="/images/before-dashboard.png"
-                                afterImage="/images/after-dashboard.png"
-                                beforeLabel="Before: 20+ metrics, no focus"
-                                afterLabel="After: 3 key metrics, clear hierarchy"
-                            />
-                            <p className="makeover-result"><strong>Result:</strong> 80% reduction in cognitive load, faster decision-making</p>
-                        </div>
+                        {PROJECTS.find(p => p.id === 'the-voting-booth')?.makeovers?.map((makeover, i) => (
+                            <div className="makeover-item" key={i} style={{ marginBottom: i === 0 ? '48px' : '0' }}>
+                                <BeforeAfterSlider
+                                    beforeImage={makeover.beforeImage}
+                                    afterImage={makeover.afterImage}
+                                    beforeLabel={makeover.beforeLabel}
+                                    afterLabel={makeover.afterLabel}
+                                />
+                                <p className="makeover-result"><strong>Result:</strong> {makeover.result}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

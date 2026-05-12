@@ -3,29 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import MediaRenderer from '../components/MediaRenderer';
 
-const GALLERY_ITEMS = [
-    {
-        id: 'chart-1',
-        title: 'Placeholder Chart 1',
-        description: 'A brief description of this standalone chart.',
-        imageSrc: 'https://placehold.co/600x400/1e1e1e/888888?text=Chart+1',
-        link: '#'
-    },
-    {
-        id: 'chart-2',
-        title: 'Placeholder Chart 2',
-        description: 'Another interesting visualization.',
-        imageSrc: 'https://placehold.co/600x400/1e1e1e/888888?text=Chart+2',
-        link: '#'
-    },
-    {
-        id: 'chart-3',
-        title: 'Placeholder Chart 3',
-        description: 'More data insights.',
-        imageSrc: 'https://placehold.co/600x400/1e1e1e/888888?text=Chart+3',
-        link: '#'
-    }
-];
+import { GALLERY_ITEMS } from '../data/gallery';
 
 const GalleryView: React.FC = () => {
     const { t } = useTranslation();

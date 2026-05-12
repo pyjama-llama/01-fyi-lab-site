@@ -43,6 +43,7 @@ const ProjectsView: React.FC = () => {
                                     type={project.type}
                                     tags={project.tags}
                                     imageSrc={project.imageSrc}
+                                    fallbackImageSrc={project.fallbackImageSrc}
                                     link={`/projects/${project.id}`}
                                 />
                             </motion.div>

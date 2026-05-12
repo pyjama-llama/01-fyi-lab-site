@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <MediaRenderer src={imageSrc} poster={fallbackImageSrc} alt={`${title} preview`} className="card-image" />
             <div className="card-top">
                 <span className="mono">{type}</span>
-                <div style={{ display: 'flex', gap: '8px' }}>
+                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                     {tags.map(tag => (
                         <span key={tag} className="pill">{tag}</span>
                     ))}
