@@ -76,5 +76,12 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         description: 'Comparing a party\'s average vote to the demographic vote to show over vs under indexing.',
         imageSrc: '/images/projects/project-1/09_heatmap_frávik.png',
         link: '/projects/the-voting-booth'
+    },
+    {
+        id: 'landsbanki-forecast-remake',
+        title: '[LAB] Forecast vs. Actuals',
+        description: 'Work in Progress: A laboratory experiment remaking corporate financial forecasts. Exploring high-density alternatives to traditional banking charts. (Landsbankinn Case Study)',
+        imageSrc: '/images/projects/4-Landsbanki-data-remixes/actuals_vs_forecast_2026-05-08_12-47.png',
+        link: '#'
     }
 ];
