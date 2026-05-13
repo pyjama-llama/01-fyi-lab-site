@@ -1,6 +1,7 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/MainLayout';
+import ScrollToTop from './components/ScrollToTop';
 import HomeView from './views/HomeView';
 import ProjectsView from './views/ProjectsView';
 import ProjectDetailView from './views/ProjectDetailView';
@@ -13,6 +14,7 @@ import './i18n';
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomeView />} />

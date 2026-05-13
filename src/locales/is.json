@@ -16,7 +16,7 @@
         "focus_label": "Áhersla",
         "focus_value": "Söguþráður, mælaborð, útskýringar",
         "tools_label": "Tól",
-        "tools_value": "React, D3, Observable, Python",
+        "tools_value": "React, D3, R ggplot2, Tableau, Python",
         "timezone_label": "Tímabelti",
         "timezone_value": "UTC"
     },

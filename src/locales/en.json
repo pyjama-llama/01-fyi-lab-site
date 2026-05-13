@@ -16,7 +16,7 @@
         "focus_label": "Focus",
         "focus_value": "Storytelling, dashboards, explainers",
         "tools_label": "Tools",
-        "tools_value": "React, D3, Observable, Python",
+        "tools_value": "React, D3, R ggplot2, Tableau, Python",
         "timezone_label": "Timezone",
         "timezone_value": "UTC"
     },
