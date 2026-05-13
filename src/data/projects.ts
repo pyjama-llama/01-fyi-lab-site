@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
             },
             {
                 title: 'House Effect Small Multiples',
-                caption: 'Seeing how different pollsters poll political parties over time.',
+                caption: 'Each pollster gets its own mini-chart — making structural polling biases instantly visible without statistical training.',
                 imageSrc: '/images/projects/project-1/06_house_effects_small_multiples.png'
             },
             {
