@@ -13,6 +13,11 @@ Always enforce this workflow when adding projects:
 - **Styling:** CSS exclusively. Do not switch to Tailwind or CSS modules without the user's explicit request. Follow the CSS variable conventions established in `src/index.css`.
 - **Data:** All project data must remain centralized in `src/data/projects.ts` inside the `PROJECTS` array. Do not hardcode project details into layout components.
 
+## Design Aesthetics & Rules
+- **After vs Before:** In comparisons (sliders, side-by-side), always lead with the **After** (remake) first or on the left/primary side, following the user's preference for showcasing results over history.
+- **Top-Aligned Titles:** Charts and visualizations should generally have titles/captions at the top rather than the bottom to ensure they are the first thing the reader sees.
+- **No placeholders:** Never use placeholder images. If an asset is missing, use a descriptive SVG fallback or ask the user.
+
 ## Agent Autonomy & Boundaries (Learnings)
 1. **No Unexpected Sweeping Changes:** When the user asks for updates (like filling out placeholder text), the agent must not completely rewrite the architecture or invent content concepts without explicit approval. Draft the proposal first.
 2. **Context First:** Always verify files exist (like a `.mp4`) or check `.cursorrules` before injecting code that assumes an asset is present.

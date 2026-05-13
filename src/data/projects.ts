@@ -24,6 +24,11 @@ export interface Project {
         afterLabel: string,
         result: string
     }[]; // Interactive before/after sliders
+    deconstruction?: {
+        feature: string,
+        problem: string,
+        solution: string
+    }[]; // Table for "Lab" projects deconstructing bad charts
 }
 
 export const PROJECTS: Project[] = [
@@ -192,5 +197,49 @@ export const PROJECTS: Project[] = [
         result: 'The visualization successfully educated viewers on why different polls from the exact same week showed wildly varying results, increasing overall data literacy surrounding the election cycle.',
         tools: ['D3.js', 'Python (data)'],
         externalUrl: 'https://kjorklefinn.is',
+    },
+    {
+        id: 'landsbanki-forecast-remake',
+        title: 'Landsbanki Forecast Remake',
+        type: 'Laboratory Experiment',
+        tags: ['R', 'ggplot2', 'Financial Dataviz', 'Lab'],
+        tagline: 'Laboratory Work: Snapshot deconstruction of corporate financial reporting.',
+        description: 'A laboratory case study remaking a "Forecast vs. Actuals" snapshot from a standard banking report. This experiment focuses on "After vs. Before" deconstruction—prioritizing legibility, horizontal label orientation, and high-contrast accessibility over traditional corporate aesthetics.',
+        imageSrc: '/images/projects/4-Landsbanki-data-remixes/actuals_vs_forecast_2026-05-08_12-47.png',
+        challenge: 'The original chart suffered from "Confused Puppy" syndrome due to diagonal category labels, making it physically taxing to read. Additionally, low-contrast colors (dark blue and yellow) made it difficult to quickly distinguish between forecast cycles.',
+        solution: 'I rebuilt the chart in R using a dumbbell/dot plot style. I flipped the orientation to horizontal for instant readability, used a high-contrast palette, and applied editorialized headlines to communicate insights rather than just describing the data.',
+        result: 'A significantly more accessible and editorialized visualization that communicates the "So what?" immediately, without requiring the reader to tilt their head or struggle with color differentiation.',
+        tools: ['R', 'ggplot2', 'Quarto', 'Patchwork'],
+        makeovers: [
+            {
+                afterImage: '/images/projects/4-Landsbanki-data-remixes/actuals_vs_forecast_2026-05-08_12-47.png',
+                beforeImage: '/images/projects/4-Landsbanki-data-remixes/landsbanki_actual_vs_forecast_mars2026.png',
+                afterLabel: 'After: FYI Lab Editorial Remake',
+                beforeLabel: 'Before: Standard Corporate Snapshot',
+                result: 'Switching to horizontal labels and a dumbbell plot style eliminated the cognitive load of the original. The high-contrast palette and editorialized title ensure the chart tells a clear story at a glance.'
+            }
+        ],
+        deconstruction: [
+            {
+                feature: 'Label Orientation',
+                problem: 'Diagonal labels cause "Confused Puppy" syndrome (neck tilt required).',
+                solution: 'Horizontal alignment for instant, natural readability.'
+            },
+            {
+                feature: 'Color Contrast',
+                problem: 'Dark blue and yellow markers are hard to differentiate at a glance.',
+                solution: 'High-contrast, accessible palette clearly separating forecast vs. actuals.'
+            },
+            {
+                feature: 'Titling',
+                problem: 'Purely descriptive titles (e.g., "Framlag undirliða") lack context.',
+                solution: 'Editorialized headlines that communicate the "So what?" immediately.'
+            },
+            {
+                feature: 'Data Encoding',
+                problem: 'The original layout made it hard to see the exact "delta" between values.',
+                solution: 'Dumbbell / Dot plot style to focus on the precision of the gap.'
+            }
+        ]
     }
 ];

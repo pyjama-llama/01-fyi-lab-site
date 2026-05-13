@@ -157,6 +157,43 @@ const ProjectDetailView: React.FC = () => {
                     </p>
                 </section>
 
+                {/* Deconstruction Table (for Lab projects) */}
+                {project.deconstruction && project.deconstruction.length > 0 && (
+                    <section style={{ marginBottom: '56px' }}>
+                        <p className="kicker" style={{ marginBottom: '24px' }}>Laboratory Analysis: Deconstructing the Original</p>
+                        <div style={{ 
+                            overflowX: 'auto', 
+                            borderRadius: '12px',
+                            border: '1px solid var(--border)',
+                            background: 'var(--surface)'
+                        }}>
+                            <table style={{ 
+                                width: '100%', 
+                                borderCollapse: 'collapse', 
+                                fontSize: '15px',
+                                textAlign: 'left'
+                            }}>
+                                <thead>
+                                    <tr style={{ background: 'var(--surface-2)' }}>
+                                        <th style={{ padding: '16px', borderBottom: '1px solid var(--border)', width: '25%' }}>Design Feature</th>
+                                        <th style={{ padding: '16px', borderBottom: '1px solid var(--border)', width: '35%' }}>Original Problem</th>
+                                        <th style={{ padding: '16px', borderBottom: '1px solid var(--border)', color: 'var(--accent)', fontWeight: 'bold' }}>FYI Lab Solution</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {project.deconstruction.map((item, idx) => (
+                                        <tr key={idx} style={{ borderBottom: idx === project.deconstruction!.length - 1 ? 'none' : '1px solid var(--border)' }}>
+                                            <td style={{ padding: '16px', fontWeight: 600, verticalAlign: 'top' }}>{item.feature}</td>
+                                            <td style={{ padding: '16px', color: 'var(--muted)', verticalAlign: 'top', lineHeight: 1.5 }}>{item.problem}</td>
+                                            <td style={{ padding: '16px', background: 'color-mix(in oklab, var(--accent) 5%, transparent)', fontWeight: 500, verticalAlign: 'top', lineHeight: 1.5 }}>{item.solution}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                )}
+
                 {/* Result — pull quote treatment */}
                 <div style={{
                     borderRadius: 'var(--radius)',

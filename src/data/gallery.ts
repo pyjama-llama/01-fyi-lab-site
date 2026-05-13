@@ -82,6 +82,6 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: '[LAB] Forecast vs. Actuals',
         description: 'Work in Progress: A laboratory experiment remaking corporate financial forecasts. Exploring high-density alternatives to traditional banking charts. (Landsbankinn Case Study)',
         imageSrc: '/images/projects/4-Landsbanki-data-remixes/actuals_vs_forecast_2026-05-08_12-47.png',
-        link: '#'
+        link: '/projects/landsbanki-remake'
     }
 ];
