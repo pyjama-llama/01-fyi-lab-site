@@ -1,5 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import MainLayout from './components/MainLayout';
 import ScrollToTop from './components/ScrollToTop';
 import HomeView from './views/HomeView';
@@ -26,6 +27,7 @@ function App() {
           <Route path="zen" element={<ZenView />} />
         </Route>
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
