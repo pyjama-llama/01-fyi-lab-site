@@ -16,6 +16,7 @@ export interface Project {
     result: string;
     tools: string[];
     externalUrl?: string;      // Link to live project, if applicable
+    downloads?: { label: string, url: string }[]; // Optional downloadable files like PDFs
     charts?: { title: string, caption: string, imageSrc: string }[]; // Custom charts for detail view
     makeovers?: {
         beforeImage: string,
@@ -32,6 +33,30 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
+    {
+        id: 'european-wages-2026',
+        title: 'European Wage Slopes: Nominal vs. PPP',
+        type: 'Data Journalism',
+        tags: ['R', 'ggplot2', 'Data Journalism'],
+        tagline: 'Visualizing the disparity between nominal wages and actual purchasing power across Europe.',
+        description: 'A data journalism exploration comparing the gross average wages in Europe to their equivalent in Purchasing Power Parity (PPP). This project includes both a one-page data visualization intended for broad audiences and a more detailed academic article exploring the methodology and economic implications like "cold shrinkage".',
+        imageSrc: '/images/projects/european-wages/01_overview.png',
+        challenge: 'Reporting on wages often focuses purely on nominal numbers, missing the critical context of how much those wages can actually buy when adjusting for national price levels (inflation, taxation).',
+        solution: 'I designed a "New York Times" style slope chart connecting nominal wage ranks directly to PPP wage ranks, making the steep shifts in purchasing power instantly visible without overwhelming the reader.',
+        result: 'An accessible, high-fidelity visualization alongside an academic deep-dive, bringing clarity to how the cost of living impacts true economic standing.',
+        tools: ['R', 'ggplot2', 'Quarto'],
+        downloads: [
+            { label: 'Download Data Journalism Chart (PDF)', url: '/downloads/european-wages/slope_chart_20260520.pdf' },
+            { label: 'Download Academic Article (PDF)', url: '/downloads/european-wages/european_wages_2026_05_20.pdf' }
+        ],
+        charts: [
+            {
+                title: 'Nominal vs. Purchasing Power',
+                caption: 'Slope chart displaying rank changes when adjusting wages for local cost of living.',
+                imageSrc: '/images/projects/european-wages/01_overview.png'
+            }
+        ]
+    },
     {
         id: 'sveitakosningar-2026',
         title: 'Borgarstjórnarkosningar 2026',
