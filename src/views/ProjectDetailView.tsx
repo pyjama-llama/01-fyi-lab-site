@@ -127,7 +127,7 @@ const ProjectDetailView: React.FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="button button-primary"
-                            style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+                            style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginRight: '12px', marginBottom: '12px' }}
                         >
                             View Live Project
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -136,6 +136,24 @@ const ProjectDetailView: React.FC = () => {
                             </svg>
                         </a>
                     )}
+
+                    {project.downloads && project.downloads.map(download => (
+                        <a
+                            key={download.url}
+                            href={download.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="button button-primary"
+                            style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginRight: '12px', marginBottom: '12px' }}
+                        >
+                            {download.label}
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </a>
+                    ))}
                 </div>
 
                 {/* Divider */}
@@ -291,6 +309,17 @@ const ProjectDetailView: React.FC = () => {
                             View live project
                         </a>
                     )}
+                    {project.downloads && project.downloads.map(download => (
+                        <a
+                            key={`footer-${download.url}`}
+                            className="button button-primary"
+                            href={download.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {download.label}
+                        </a>
+                    ))}
                     <a className="button" href="mailto:victor.blaer@fyi-lab.is?subject=Project%20Inquiry">
                         Start a similar project
                     </a>
