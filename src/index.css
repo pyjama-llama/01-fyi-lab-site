@@ -189,7 +189,7 @@ a:hover {
 .button-primary {
   background: var(--accent-2);
   border-color: color-mix(in oklab, var(--accent-2) 65%, var(--border));
-  color: color-mix(in oklab, var(--bg) 2%, #000);
+  color: #ffffff;
 }
 
 :root[data-theme="dark"] .button-primary {

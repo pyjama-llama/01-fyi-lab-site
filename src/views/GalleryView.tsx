@@ -48,7 +48,6 @@ const GalleryView: React.FC = () => {
                             >
                                 <a href={item.link} style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
                                     <div style={{ width: '100%', aspectRatio: '3/2', overflow: 'hidden' }}>
-                                        {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <MediaRenderer
                                             src={item.imageSrc}
                                             alt={item.title}

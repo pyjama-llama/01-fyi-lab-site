@@ -30,7 +30,13 @@
         "makeover_title": "03. Umbreytingar: Fyrir og eftir",
         "makeover_subtitle": "Dragðu stikuna til að sjá umbreytingu frá óreglu til skýrleika",
         "cta_footer_title": "Tilbúin(n) í uppfærslu?",
-        "cta_footer_subtitle": "Sendu mér þína flóknustu framsetningu og ég sýni þér hvernig má umbreyta henni"
+        "cta_footer_subtitle": "Sendu mér þína flóknustu framsetningu og ég sýni þér hvernig má umbreyta henni",
+        "featured_impact": "Frá gögnum að vá.",
+        "personas_title": "02. Fyrir hverja ég vinn",
+        "personas_impact": "Gagnasýn er tungumál gagnanna. Ég er túlkurinn þinn.",
+        "personas_subtitle": "Hvort sem þú þarft að sannfæra almenning, upplýsa stjórn eða útskýra flóknar rannsóknir, þá byggi ég brúna milli gagnanna þinna og áhorfenda þinna.",
+        "services_impact": "Frá gögnum að vá: Heildarlausnir",
+        "makeover_impact": "Frá ringulreið til skýrleika"
     },
     "services": {
         "custom_title": "Sérsniðin Gagnasýn",
@@ -42,7 +48,9 @@
         "consulting_title": "Gervigreindarráðgjöf",
         "consulting_body": "Frá hugmynd að hæfni: Stefnumótandi innleiðing á gervigreind í vörur sem leysa raunveruleg vandamál, án óþarfa flækjustigs.",
         "availability_title": "Laus rýmd",
-        "availability_body": "FYI Lab er rekið af einum aðila. Bestu verkefnin byrja með stuttu spjalli og skýru markmiði."
+        "availability_body": "FYI Lab er rekið af einum aðila. Bestu verkefnin byrja með stuttu spjalli og skýru markmiði.",
+        "workshop_title": "Vinnustofur og þjálfun teyma",
+        "workshop_body": "Stefnumótun við töfluna til að finna kjarnaskilaboðin, og þjálfun teymisins í skýrri framsetningu."
     },
     "projects": {
         "kicker": "Valin verk",
@@ -51,11 +59,47 @@
     },
     "footer": {
         "location": "Reykjavík, Ísland",
-        "copy": "© 2024 FYI Lab. Umbreytum flóknum gögnum í skýrar ákvarðanir."
+        "copy": "© 2026 FYI Lab. Umbreytum flóknum gögnum í skýrar ákvarðanir."
     },
     "gallery": {
         "kicker": "Valdar myndir",
         "title": "Myndasafn gagna",
         "subtitle": "Sérvalið safn af stökum myndum, tilraunum og brotum úr stærri verkefnum."
+    },
+    "about": {
+        "kicker": "Bakgrunnurinn",
+        "title": "Síðasta áratuginn hef ég byggt upp gagnasögur fyrir nokkur af stærstu fyrirtækjum heims.",
+        "vodafone_impact": "Frá nafnlausum staðsetningargögnum til mannslífa.",
+        "vodafone_p1": "Hjá Vodafone Global Enterprise starfaði ég sem Global Proposition Development Manager. Starf mitt var að taka milljarða nafnlausra staðsetningargagna úr farsímum og breyta þeim í lausnir sem fólk gat raunverulega skilið og notað.",
+        "vodafone_p2": "Það fól í sér samstarf við alþjóðleg stórfyrirtæki á borð við JCDecaux við greiningu á útimiðlum, og greiningu á ferðum ólíkra hópa um helstu samgöngumiðstöðvar.",
+        "vodafone_highlight": "„Eitt af því sem ég er stoltastur af er að hafa notað staðsetningargögn til að bæta öryggi hjólreiðafólks á Super Cycle Highway í London fyrir Transport for London. Að sjá gögn skila sér beint í björguðum mannslífum er einmitt ástæðan fyrir því að ég helga hluta af tíma mínum samfélagslegum verkefnum í dag.“",
+        "fb_impact": "Skýrslugerð á 35 milljarða dala skala.",
+        "fb_p1": "Síðar, sem Global Insights, Analytics and Reporting Manager hjá Facebook, þurfti ég að finna leiðir til að miðla gríðarstórum og flóknum mælikvörðum til æðstu stjórnenda og stórra samstarfsaðila.",
+        "fb_bullet1": "Bjó til fyrsta nýja kaflann í sex ár í alþjóðlegu ársfjórðungsskýrslunni.",
+        "fb_bullet2": "Byggði sérsniðin greiningarferli á útgjöldum stórra viðskiptavina yfir Cyber Weekend.",
+        "fb_bullet3": "Greindi nýtingarhlutfall lánalína í 35 milljarða dala eignasafni.",
+        "pitch_title": "Nú vil ég færa sömu fagmennsku inn í þitt verkefni.",
+        "pitch_body": "Hvort sem þú ert sprotafyrirtæki, vaxandi félagasamtök eða rannsakandi með nýja uppgötvun, þá átt þú skilið sama skýrleika og myndræna frásögn og stærstu fyrirtæki heims treysta á.",
+        "cta": "Ræðum gögnin þín"
+    },
+    "personas": {
+        "researcher_title": "Rannsakandinn",
+        "researcher_problem": "Þú situr á djúpum og traustum gögnum en átt erfitt með að gera þau aðgengileg breiðari hópi án þess að tapa blæbrigðunum.",
+        "researcher_solution": "„Ég þarf að breyta þessari 50 blaðsíðna tækniskýrslu í gagnvirka framsetningu sem fólk skilur í raun og deilir.“",
+        "executive_title": "Stjórnandinn",
+        "executive_problem": "Þú ert að drukkna í óreiðukenndum töflureiknum og ruglingslegum mælaborðum sem draga ekki fram aðalatriðin.",
+        "executive_solution": "„Ég þarf skýra og sjálfvirka skýrslugerð svo stjórnin geti tekið hraðar og upplýstar ákvarðanir.“",
+        "policy_title": "Stefnumótandinn",
+        "policy_problem": "Þú þarft að sannfæra almenning og móta stefnu, en hrá tölfræði er þurr og auðvelt að líta fram hjá henni.",
+        "policy_solution": "„Ég þarf sannfærandi myndræna frásögn sem gerir áhrif okkar óumdeilanleg í augum fjölmiðla og almennings.“",
+        "law_title": "Löggæsla",
+        "law_problem": "Þú þarft að greiða úr flóknum glæpa- og fjármálanetum til að bera kennsl á lykilaðila og setja sönnunargögn skýrt fram.",
+        "law_solution": "„Ég þarf sérsniðnar gagnvirkar lausnir og netgreiningu sem gera niðurstöður okkar óhrekjanlegar fyrir dómi eða á kynningarfundum.“"
+    },
+    "notfound": {
+        "title": "Þessi síða er ekki til",
+        "body": "Hlekkurinn gæti verið úreltur eða síðan hefur verið færð.",
+        "home": "Fara á forsíðu",
+        "projects": "Skoða verkefni"
     }
 }

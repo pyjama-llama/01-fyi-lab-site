@@ -1,4 +1,9 @@
 {
+  "redirects": [
+    { "source": "/projects/upset-plot-analysis", "destination": "/projects/the-voting-booth", "permanent": true },
+    { "source": "/projects/animated-loess-smoothing", "destination": "/projects/the-voting-booth", "permanent": true },
+    { "source": "/projects/house-effects-small-multiples", "destination": "/projects/the-voting-booth", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
