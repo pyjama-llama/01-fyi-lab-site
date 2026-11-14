@@ -26,14 +26,14 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'Coalition Viability (UpSet Plot)',
         description: 'A visualization technique designed to handle complex intersecting sets without the illegibility of Venn diagrams.',
         imageSrc: '/images/projects/project-1/03_upset_plot_coaltion.png',
-        link: '/projects/upset-plot-analysis'
+        link: '/projects/the-voting-booth'
     },
     {
         id: 'house-effects',
         title: 'House Effects Small Multiples',
         description: 'Using small multiples to reveal structural polling biases that are hidden when looking only at aggregates.',
         imageSrc: '/images/projects/project-1/06_house_effects_small_multiples.png',
-        link: '/projects/house-effects-small-multiples'
+        link: '/projects/the-voting-booth'
     },
     {
         id: 'kjorklefinn-overview',
@@ -54,7 +54,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
         title: 'Animated Loess Smoothing',
         description: 'Non-parametric method for smoothing data to show the direction a bunch of data is trending.',
         imageSrc: '/images/projects/project-1/04_loess_animated.png',
-        link: '/projects/animated-loess-smoothing'
+        link: '/projects/the-voting-booth'
     },
     {
         id: 'house-effect-box',
