@@ -66,7 +66,7 @@ function useAurora(canvasRef: React.RefObject<HTMLCanvasElement | null>, active:
                 for (let x = 0; x <= canvas.width; x += 4) {
                     const y = w.baseY + Math.sin(x * 0.006 + t * w.speed * 180 + w.phase) * w.amplitude
                         + Math.sin(x * 0.002 + t * w.speed * 70) * w.amplitude * 0.35;
-                    x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+                    if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
                 }
                 ctx.lineTo(canvas.width, canvas.height);
                 ctx.lineTo(0, canvas.height);
@@ -94,7 +94,7 @@ function useAmbientAudio(sound: Sound, active: boolean) {
     const nodesRef = useRef<AudioNode[]>([]);
 
     const stop = useCallback(() => {
-        nodesRef.current.forEach(n => { try { (n as AudioScheduledSourceNode).stop?.(); } catch { } });
+        nodesRef.current.forEach(n => { try { (n as AudioScheduledSourceNode).stop?.(); } catch { /* node already stopped */ } });
         nodesRef.current = [];
         ctxRef.current?.close();
         ctxRef.current = null;

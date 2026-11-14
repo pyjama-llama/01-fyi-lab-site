@@ -5,20 +5,18 @@ import clsx from 'clsx';
 
 const Header: React.FC = () => {
     const { t, i18n } = useTranslation();
-    const [theme, setTheme] = useState<'light' | 'dark'>('light');
+    // Start from the system preference (read once, on first render)
+    const [theme, setTheme] = useState<'light' | 'dark'>(() =>
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    );
 
     useEffect(() => {
-        // Check initial system/saved preference
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setTheme('dark');
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    }, []);
+        document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
 
     const toggleTheme = () => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
         setTheme(newTheme);
-        document.documentElement.setAttribute('data-theme', newTheme);
     };
 
     const toggleLanguage = () => {
