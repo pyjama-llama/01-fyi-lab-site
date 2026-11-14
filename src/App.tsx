@@ -7,7 +7,7 @@ import HomeView from './views/HomeView';
 import ProjectsView from './views/ProjectsView';
 import ProjectDetailView from './views/ProjectDetailView';
 import AboutView from './views/AboutView';
-import WritingView from './views/WritingView';
+import NotFoundView from './views/NotFoundView';
 import GalleryView from './views/GalleryView';
 import ZenView from './views/ZenView';
 import './i18n';
@@ -23,8 +23,9 @@ function App() {
           <Route path="projects/:id" element={<ProjectDetailView />} />
           <Route path="gallery" element={<GalleryView />} />
           <Route path="about" element={<AboutView />} />
-          <Route path="writing" element={<WritingView />} />
           <Route path="zen" element={<ZenView />} />
+          {/* /writing (WritingView.tsx) is parked until the blog launches */}
+          <Route path="*" element={<NotFoundView />} />
         </Route>
       </Routes>
       <Analytics />

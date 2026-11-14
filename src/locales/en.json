@@ -95,5 +95,11 @@
         "kicker": "Selected visuals",
         "title": "Chart Gallery",
         "subtitle": "A curated collection of standalone charts, visual experiments, and snippets from larger projects."
+    },
+    "notfound": {
+        "title": "This page doesn't exist",
+        "body": "The link may be old, or the page has moved.",
+        "home": "Go to the homepage",
+        "projects": "See projects"
     }
 }
